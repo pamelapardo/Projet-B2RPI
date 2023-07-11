@@ -10,7 +10,7 @@ export default function Header() {
       </div>
 
       <div className='tab_container'>
-        <div>Tab app</div>
+        <div>Tab apps</div>
         <div>Tab Wiki</div>
       </div>
 
