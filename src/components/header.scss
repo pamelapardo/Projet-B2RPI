@@ -1,0 +1,17 @@
+.background_header{
+  background-color: #D9D9D9;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.tab_container{
+  display: flex;
+  justify-content: flex-start;
+  width: 70%;
+}
