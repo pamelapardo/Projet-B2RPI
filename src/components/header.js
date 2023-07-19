@@ -1,7 +1,7 @@
 import React from 'react'
 import './header.scss'
 import Logo from '../images/Logo.png'
-import { Link, Nav, NavLink, useMatch, useResolvedPath } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default function Header() {
   return (
@@ -21,13 +21,3 @@ export default function Header() {
     </div>
   )
 }
-
-// function CustonLink({to, children, ...props}){
-//   const resolvedPath = useResolvedPath(to);
-//   const isActive = useMatch({path: resolvedPath.pathname})
-//   return(
-//     <Link className={isActive ? "active" : " "} to={to} {...props}>
-//       {children}
-//     </Link>
-//   )
-// }
