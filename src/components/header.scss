@@ -1,17 +1,51 @@
-.background_header{
+
+.container_header{
   background-color: #D9D9D9;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.4rem;
+  height: 2rem;
 }
-
-.tab_container{
+.tabs_container_header{
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   width: 70%;
+  height: 100%;
+}
+// --- Ce style des tabs c'est pour quand il sont actives
+.tab_header{
+  padding: 0rem 1.5rem;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 16px 16px 0px 0px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &:hover{
+    background-color: rgba(255, 255, 255, 0.653);
+    border-radius: 16px 16px 0px 0px;
+  }
+}
+.tab_header_active{
+  padding: 0rem 1.5rem;
+  height: 100%;
+  background-color: white;
+  border-radius: 16px 16px 0px 0px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &:hover{
+    background-color: rgba(255, 255, 255, 0.653);
+    border-radius: 16px 16px 0px 0px;
+  }
+}
+.logo_header{
+  height: 14px;
 }
