@@ -1,0 +1,61 @@
+//----- PAGE FORMAT
+.app_page_container{
+  height: 100%;
+  padding: 30px 60px;
+}
+.app_wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px 23px;
+}
+
+//----- CARD CONTAINER STYLE
+.app_card_container{
+  display: flex;
+  width: 370px;
+  background-color: #D9D9D9;
+  border-radius: 26px;
+  padding: 15px;
+  transition: 0.2s;
+  cursor: pointer;
+
+  &:hover{
+    background-color: #e3e3e3;
+    -webkit-box-shadow: 0px 5px 10px -2px rgba(47,47,47,0.36); 
+    box-shadow: 0px 3px 10px -2px rgba(47, 47, 47, 0.36);
+  }
+
+  &:active{
+    background-color: #cecece;
+    -webkit-box-shadow: 0px 5px 10px -2px rgba(42, 42, 42, 0.36); 
+    box-shadow: 0px 3px 10px -2px rgba(42, 42, 42, 0.36);
+  }
+}
+//Le style dessous devrait etre modifié pour contenir le logo de l'app
+.app_card_logo{
+  background-color: white;
+  border-radius: 50px;
+  width: 90px;
+  height: 90px;
+}
+.app_card_txt_container{
+ padding-left: 15px;
+ width: 265px;
+ max-height: 90px;
+}
+
+//----- CARD TEXT STYLE
+.card_app_title {
+  font-weight: 500;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.2em;
+}
+.card_app_description{
+  font-size: 0.9rem;
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+  overflow-y: auto;
+  height: 42px;
+}
