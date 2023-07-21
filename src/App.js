@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import Header from './components/header'
 import Applications from "./pages/applications";
 import Wiki from "./pages/wiki"
