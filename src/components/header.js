@@ -11,7 +11,7 @@ export default function Header() {
       </div>
 
       <div className='tabs_container_header'>
-        <NavLink to="/" className={({ isActive}) => isActive ? 'tab_header_active' : "tab_header" }>App</NavLink>
+        <NavLink to="/" className={({ isActive}) => isActive ? 'tab_header_active' : "tab_header" }>Apps</NavLink>
         <NavLink to="wiki" className={({ isActive}) => isActive ? 'tab_header_active' : "tab_header" }>Wiki</NavLink>
       </div>
 

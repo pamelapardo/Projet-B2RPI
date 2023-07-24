@@ -1,6 +1,6 @@
 import React from 'react'
-import '../components/comp_applications/app_card.scss'
-import App_card from '../components/comp_applications/app_card'
+import '../components/componentApplications/appCard.scss'
+import AppCard from '../components/componentApplications/appCard'
 
 const appList = [
   {logo:'logo', title:'Application 1', description:'This is my app description in a few words.'},
@@ -16,10 +16,13 @@ export default function Applications() {
   return (
     <div className='ph100'>
       <div className='app_page_container'>
+        <div>
+          Barre de recherche
+        </div>
         <div className='app_wrapper'>
 
         {appList.map((appSrc, index) => {
-          return <App_card 
+          return <AppCard 
           key={index}
           title={appSrc.title}
           description={appSrc.description}

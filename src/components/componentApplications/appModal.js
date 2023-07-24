@@ -1,8 +1,9 @@
 import React from 'react'
-import './app_modal.scss'
-import './app_card.scss'
+import './appModal.scss'
+import './appCard.scss'
+import { Link } from 'react-router-dom'
 
-export default function App_modal(props) {
+export default function AppModal(props) {
 
   return (
     <div className={`app_modal_container ${props.show ? 'show' : ' '}`} onClick={props.onClose}>
@@ -13,8 +14,8 @@ export default function App_modal(props) {
           <h3 className='card_app_title'>{props.title}</h3>
           <p className='card_app_description'>{props.description}</p>
           <div className='modal_btn_container'>
-            <button onClick={ props.onClose} className='common_btn'>Annuler</button>
-            <button className='common_btn'>Ouvrir</button>
+            <Link to="appLaunch" className='common_btn'>Ouvrir</Link>
+            <Link to='wiki' className='common_btn'>Wiki</Link>
           </div>
         </div>
       </div>

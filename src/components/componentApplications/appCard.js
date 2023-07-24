@@ -1,9 +1,9 @@
 import React from 'react'
-import './app_card.scss'
+import './appCard.scss'
 import { useState } from 'react';
-import AppModal from './app_modal';
+import AppModal from './appModal';
 
-export default function App_card(props) {
+export default function AppCard(props) {
   const [show, setShow] = useState(false)
 
   return (

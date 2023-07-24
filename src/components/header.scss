@@ -13,9 +13,14 @@
   align-items: center;
   width: 70%;
   height: 100%;
+  gap: 10px;
+  padding-top: 7px;
+  & a{
+    font-size: 0.8rem;
+  }
 }
 .tab_header{
-  padding: 0rem 1.5rem;
+  padding: 0rem 1.7rem;
   height: 100%;
   background-color: transparent;
   border-radius: 16px 16px 0px 0px;
@@ -31,7 +36,7 @@
   }
 }
 .tab_header_active{
-  padding: 0rem 1.5rem;
+  padding: 0rem 1.7rem;
   height: 100%;
   background-color: white;
   border-radius: 16px 16px 0px 0px;

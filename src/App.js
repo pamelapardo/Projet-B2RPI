@@ -1,4 +1,5 @@
 import './App.scss';
+import AppLaunch from './components/componentApplications/appLaunch';
 import Header from './components/header'
 import Applications from "./pages/applications";
 import Wiki from "./pages/wiki"
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Applications/>} exact/>
           <Route path='wiki' element={<Wiki/>} exact/>
+          <Route path='appLaunch' element={<AppLaunch/>} exact/>
         </Routes>
       </div>
     </div>
