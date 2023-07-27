@@ -1,7 +1,7 @@
 .navbar_wiki_container{
   display: flex;
   flex-direction: column;
-  width: 18vw;
+  width: 17vw;
   min-width: 10vw;
   background-color: #ECECEC;
 }
@@ -25,6 +25,10 @@
   color: #606060; 
   max-height: 65vh;
   overflow-y: auto;
+  margin-bottom: 7px;
+  margin-top: 5px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 .basic_articles_container{
   margin: 0px 15px;
@@ -38,5 +42,6 @@
   align-items: center;
   gap: 10px;
   color: #9C9C9C !important;
+  margin-left: -10px;
 }
 

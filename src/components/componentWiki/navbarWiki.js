@@ -2,6 +2,22 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './navbarWiki.scss'
 
+const motsCleList = [
+  {word:"Alorem"},
+  {word:"Bonsecteur"},
+  {word:"Caliqua"},
+  {word:"Dolor"},
+  {word:"Application"},
+  {word:"Fabricatio"},
+  {word:"Opsum"},
+  {word:"Sit"},
+  {word:"Velit"},
+  {word:"Amet"},
+  {word:"Red"},
+  {word:"Arum"},
+  {word:"Adisciping"}
+]
+
 export default function NavbarWiki() {
   return (
     <div className='navbar_wiki_container'>
@@ -15,7 +31,9 @@ export default function NavbarWiki() {
       <div className='navbar_items'>
         <p className='nav_link'>Tous les mots clé</p>
         <div className='mot_cle_container'>
-          Mots clé<br />Mots clé<br />Mots clé<br />Mots clé<br />Mots clé<br />Mots clé<br />Mots clé
+          {motsCleList.map((mot,index)=> {
+            return <p key={index}>{mot.word}</p>
+          })}
         </div>
       </div>
 

@@ -21,7 +21,6 @@ p{
 .h100{
   height: 100vh;
   overflow: auto;
-  background-color: aqua;
 }
 
 /* ---- ALL BUTTONS STYLES */
@@ -52,6 +51,8 @@ p{
 .wiki_page_container{
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: calc(100% - 2em);
 }
-
+.wiki_content_space{
+  padding: 20px;
+}

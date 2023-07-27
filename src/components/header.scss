@@ -11,7 +11,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  width: 70%;
+  width: 69%;
   height: 100%;
   gap: 10px;
   & a{
@@ -27,6 +27,7 @@
   justify-content: flex-start;
   align-items: center;
   transition: 0.3s;
+  color: #8d8d8d !important;
   &:hover{
     background-color: rgba(255, 255, 255, 0.653);
   }
