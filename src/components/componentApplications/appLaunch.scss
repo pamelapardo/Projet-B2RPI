@@ -1,0 +1,44 @@
+@keyframes bounce{
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(6%);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.appLaunch_page_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  animation-name: bounce;
+  animation-duration: 0.9s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  -webkit-box-shadow: 0px 5px 10px -2px rgba(47,47,47,0.36); 
+  box-shadow: 0px 3px 10px -2px rgba(47, 47, 47, 0.36);
+  opacity: 0;
+}
+
+.appLaunch_title{
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 4%;
+}
+.appLaunch_btn{
+  font-size: 0.8rem;
+  color: #9F9F9F !important;
+}

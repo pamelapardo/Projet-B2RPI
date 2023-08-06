@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500;600&display=swap');
+a{
+  border: none;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  &:visited{
+    color: #222222;
+  }
+}
+button{
+  border: none;
+}
+p{
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+}
+
+
+/* ---- GENERAL HEIGHTS */
+.h100{
+  height: 100vh;
+  overflow: auto;
+}
+
+
+/* ---- ALL BUTTONS STYLES */
+.common_btn{
+  background-color: white;
+  padding: 13px 40px;
+  border-radius: 26px;
+  transition: 0.2s;
+
+  &:hover{
+    background-color: #f1f1f1;
+    -webkit-box-shadow: 0px 5px 10px -2px rgba(47,47,47,0.236); 
+    box-shadow: 0px 4px 7px -2px rgba(47, 47, 47, 0.236);
+  }
+  &:active{
+    background-color: #0E8388;
+    color: #f1f1f1;
+    -webkit-box-shadow: 0px 5px 10px -2px rgba(42, 42, 42, 0.36); 
+    box-shadow: 0px 3px 10px -2px rgba(42, 42, 42, 0.36);
+  }
+}
+.writeArticle_btn{
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c8c8c8;
+  height: 50px;
+  width: 50px;
+  margin-left: 2vw;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  &:hover{
+    background-color: #0E8388;
+    -webkit-box-shadow: 0px 5px 10px -2px rgba(47,47,47,0.516); 
+    box-shadow: 0px 3px 10px -2px rgba(47, 47, 47, 0.516);
+  }
+}
+
+
+//----- APP PAGE FORMAT
+.app_page_container{
+  height: 100%;
+}
+
+
+//----- WIKI PAGE FORMAT
+.wiki_page_container{
+  display: flex;
+  flex-direction: row;
+  height: calc(100% - 2em);
+}
+.wiki_content_space{
+  padding: 20px;
+  overflow-y: scroll;
+  padding-bottom: 150px;
+}
+.masked-overflow {
+  -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 98%);
+  mask-image: linear-gradient(to bottom, black 90%, transparent 98%);
+  overflow-y: scroll;
+}
+.wiki_total_articles_container{
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100vw - 17vw - 5px);
+  gap: 20px 30px;
+  padding-top: 20px;
+}
+.sort_container{
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.trier_text{
+  font-size: 0.9em;
+  color: #b0b0b0;
+}
+.sort_btn_tout{
+  padding: 7px 15px;
+  border-radius: 30px;
+  background-color: #DEDEDE;
+}
+.sort_btn_solution{
+  padding: 7px 15px;
+  border-radius: 30px;
+  background-color: #70B16F;
+}
+.sort_btn_proc{
+  padding: 7px 15px;
+  border-radius: 30px;
+  background-color: #45D7CE;
+}
+.sort_btn_docu{
+  padding: 7px 15px;
+  border-radius: 30px;
+  background-color: #C096E0;
+}
+
+
+// ---- ICONS
+.loupe{
+  background-image: url(./images/loupe.svg);
+  height: 19px;
+  width: 19px;
+}
+.edit_icon{
+  background-image: url(./images/write_icon.svg );
+  height: 19px;
+  width: 19px;
+  margin-bottom: 4px;
+}
