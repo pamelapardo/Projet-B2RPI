@@ -26,11 +26,9 @@ export default function Wiki() {
   return (
     <div className='wiki_page_container'>
       <NavbarWiki/>
-      <div className='wiki_content_space masked-overflow'>
-        <div>
+      <div>
           <WikiSearchBar/>
-        </div>
-        <div className='wiki_total_articles_container'>
+        <div className='wiki_total_articles_container masked_overflow'>
           {articleList.map((articleSrc, index) =>{
             return <WikiCard
             key={index}

@@ -75,23 +75,27 @@ p{
   flex-direction: row;
   height: calc(100% - 2em);
 }
-.wiki_content_space{
-  padding: 20px;
-  overflow-y: scroll;
-  padding-bottom: 150px;
-}
-.masked-overflow {
-  -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 98%);
-  mask-image: linear-gradient(to bottom, black 90%, transparent 98%);
-  overflow-y: scroll;
-}
-.wiki_total_articles_container{
-  display: flex;
-  flex-wrap: wrap;
-  width: calc(100vw - 17vw - 5px);
-  gap: 20px 30px;
-  padding-top: 20px;
-}
+                                  .wiki_content_space{
+                                    padding: 20px;
+                                    overflow-y: scroll;
+                                    padding-bottom: 150px;
+                                  }
+                                  .masked_overflow {
+                                    -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 98%);
+                                    mask-image: linear-gradient(to bottom, black 90%, transparent 98%);
+                                  }
+                                  .wiki_total_articles_container{
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    width: calc(83vw - 60px);
+                                    gap: 20px 30px;
+                                    margin-top: 20px;
+                                    margin-left: 20px;
+                                    margin-right: 20px;
+                                    padding-bottom: 40px;
+                                    overflow-y: scroll;
+                                    height: calc(80vh - 100px);
+                                  }
 .sort_container{
   display: flex;
   align-items: center;
