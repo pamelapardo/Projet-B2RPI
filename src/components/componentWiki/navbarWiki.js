@@ -26,7 +26,7 @@ export default function NavbarWiki() {
         <Link to='/wiki' className='nav_link'>Wiki</Link>
       </div>
       <div className='navbar_items'>
-        <Link className='nav_link'>Brouillons</Link>
+        <Link to='/wiki/*/brouillons/' className='nav_link'>Brouillons</Link>
       </div>
       <div className='navbar_items'>
         <p className='nav_link'>Tous les mots clé</p>

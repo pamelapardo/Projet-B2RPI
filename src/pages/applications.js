@@ -2,7 +2,6 @@ import React from 'react'
 import '../components/componentApplications/appCard.scss'
 import AppCard from '../components/componentApplications/appCard'
 import AppSearchBar from '../components/componentApplications/appSearchBar'
-import Header from '../components/header'
 
 const appList = [
   { logo: 'logo', title: 'Application 1', description: 'This is my app description in a few words.' },

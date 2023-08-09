@@ -12,7 +12,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Applications/>}/>
         <Route path='/wiki/*' element={<Wiki/>}>
-          <Route path='content' element={<WikiContent/>}/>
+          <Route path='/wiki/*' element={<WikiContent/>}/>
+          <Route path='*/brouillons/' element={<WikiContent/>}/>
         </Route>
       </Routes>
     </div>

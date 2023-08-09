@@ -3,19 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { RouterProvider, createBrowserRouter} from "react-router-dom";
-import WikiContent from './pages/wikiOutlets/wikiContent';
 
 const router= createBrowserRouter([
   {
     path:"/*",
     element:<App/>,
-    errorElement:<div>This page does not exist.</div>,
-    children:[
-      {
-        path:"wiki/*",
-        element:<WikiContent/>,
-      }
-    ]
+    errorElement:<div>This page does not exist.</div>
   },
 ]);
 
