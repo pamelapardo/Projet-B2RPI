@@ -1,3 +1,13 @@
+.app_page_searchBar_container{
+  height: 22vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & .wikiSearchBar_items{
+    padding-right: 0vw !important;
+    border-right: 0px !important;
+  }
+}
 .app_wrapper{
   display: flex;
   flex-wrap: wrap;

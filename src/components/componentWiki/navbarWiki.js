@@ -23,7 +23,7 @@ export default function NavbarWiki() {
     <div className='navbar_wiki_container'>
 
       <div className='navbar_items'>
-        <Link className='nav_link'>Wiki</Link>
+        <Link to='/wiki' className='nav_link'>Wiki</Link>
       </div>
       <div className='navbar_items'>
         <Link className='nav_link'>Brouillons</Link>
