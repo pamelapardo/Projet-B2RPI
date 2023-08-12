@@ -1,6 +1,6 @@
 import React from 'react'
 import './wikiSearchBar.scss'
-import SortArticles from './sortArticles'
+import SortArticles from './componentWiki/sortArticles'
 
 export default function WikiSearchBar() {
   return (

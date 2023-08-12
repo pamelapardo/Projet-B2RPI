@@ -65,7 +65,7 @@ p{
 
 //----- APP PAGE FORMAT
 .app_page_container{
-  height: 100%;
+  height: calc(100% - 2em);
 }
 
 
@@ -80,8 +80,9 @@ p{
   flex-direction: column;
   margin-right: 20px;
   margin-left: 20px;
+  margin-top: 2vh;
   width: calc(93vw - 80px);
-  height: calc(100vh - 2em);
+  height: calc(98vh - 2em);
 }
 .masked_overflow {
   -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 98%);

@@ -7,6 +7,11 @@
 }
 .nav_link{
   font-size: 0.9em;
+  transition: 0.3s ease-in-out;
+}
+.nav_link_active{
+  font-size: 0.9em;
+  color: #9F9F9F !important;
 }
 .navbar_items{
   border-bottom: 1px solid #D2D2D2;

@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import Applications from './pages/applications';
 import Wiki from './pages/wiki';
 import WikiContent from './pages/wikiOutlets/wikiContent';
+import WikiLanding from './pages/wikiOutlets/wikiLanding';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Applications/>}/>
         <Route path='/wiki/*' element={<Wiki/>}>
-          <Route path='/wiki/*' element={<WikiContent/>}/>
+         <Route path='*' element={<WikiLanding/>} /> 
+          <Route path='*/all-articles' element={<WikiContent />} /> 
           <Route path='*/brouillons/' element={<WikiContent/>}/>
         </Route>
       </Routes>
