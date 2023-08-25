@@ -1,7 +1,7 @@
 import React from 'react'
 import './appModal.scss'
 import './appCard.scss'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function AppModal(props) {
 
@@ -15,7 +15,8 @@ export default function AppModal(props) {
           <p className='card_app_description'>{props.description}</p>
           <div className='modal_btn_container'>
             <Link to="appLaunch" className='common_btn'>Ouvrir</Link>
-            <Link to='wiki' className='common_btn'>Wiki</Link>
+            <NavLink to='/wiki/*' className='common_btn'>Wiki</NavLink>
+            {/* Mettre le bon lien. Ce lien doit redirect vers le wiki demandé */}
           </div>
         </div>
       </div>

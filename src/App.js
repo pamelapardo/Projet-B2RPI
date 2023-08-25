@@ -6,19 +6,25 @@ import Wiki from './pages/wiki';
 import WikiContent from './pages/wikiOutlets/wikiContent';
 import WikiLanding from './pages/wikiOutlets/wikiLanding';
 import Profile from './pages/profile';
+import WikiBrouillons from './pages/wikiOutlets/wikiBrouillons';
+import MDEditorArticle from './components/mdEditorArticle';
+import AppLaunch from './components/componentApplications/appLaunch';
 
 function App() {
   return (
     <div className="h100">
-      <Header />
+      <Header/>
       <Routes>
         <Route path='/' element={<Applications/>}/>
         <Route path='/wiki/*' element={<Wiki/>}>
          <Route path='*' element={<WikiLanding/>} /> 
           <Route path='*/all-articles' element={<WikiContent />} /> 
-          <Route path='*/brouillons/' element={<WikiContent/>}/>
+          <Route path='*/brouillons/' element={<WikiBrouillons/>}/>
+          <Route path='*/redaction_article' element={<MDEditorArticle/>}/>
         </Route>
         <Route path='/profile/' element={<Profile/>}/>
+        <Route path='/appLaunch' element={<AppLaunch/>}/>
+        
       </Routes>
     </div>
 

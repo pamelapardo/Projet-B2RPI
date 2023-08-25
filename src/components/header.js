@@ -16,7 +16,7 @@ export default function Header() {
       </div>
 
       <div>
-        <NavLink to='/profile/'>User</NavLink>
+        <NavLink to='/profile/'><div className='tiny_profile_pic' ></div></NavLink>
       </div>
     </div>
   )

@@ -37,19 +37,19 @@ export default function Profile() {
         </div>
 
         <div className='items_right'>
-          <div className='profile_label last'>
+          <div className='profile_label'>
             <label>Besoin d'applications ?</label>
             <p>Rédacteur</p>
           </div>
-          <div className='profile_label last'>
+          <div className='profile_label'>
             <label>Rôle</label>
             <p>Rédacteur</p>
           </div>
-          <div className='profile_label last'>
+          <div className='profile_label'>
             <label>Rôle</label>
             <p>Rédacteur</p>
           </div>
-          <button>Déconnexion</button>
+          <button className='deco_btn'>Déconnexion</button>
         </div>
       </div>
 
