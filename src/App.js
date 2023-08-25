@@ -5,6 +5,7 @@ import Applications from './pages/applications';
 import Wiki from './pages/wiki';
 import WikiContent from './pages/wikiOutlets/wikiContent';
 import WikiLanding from './pages/wikiOutlets/wikiLanding';
+import Profile from './pages/profile';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='*/all-articles' element={<WikiContent />} /> 
           <Route path='*/brouillons/' element={<WikiContent/>}/>
         </Route>
+        <Route path='/profile/' element={<Profile/>}/>
       </Routes>
     </div>
 

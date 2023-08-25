@@ -16,7 +16,7 @@ export default function Header() {
       </div>
 
       <div>
-        <div>User</div>
+        <NavLink to='/profile/'>User</NavLink>
       </div>
     </div>
   )
