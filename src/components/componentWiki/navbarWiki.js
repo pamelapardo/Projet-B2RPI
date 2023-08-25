@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './navbarWiki.scss'
 
 const motsCleList = [
@@ -23,10 +23,10 @@ export default function NavbarWiki() {
     <div className='navbar_wiki_container'>
 
       <div className='navbar_items'>
-        <Link className='nav_link'>Wiki</Link>
+        <NavLink to="/wiki/*/all-articles" className={({ isActive}) => isActive ? 'nav_link_active' : 'nav_link' }>Wiki</NavLink>
       </div>
       <div className='navbar_items'>
-        <Link className='nav_link'>Brouillons</Link>
+        <NavLink to='/wiki/*/brouillons/' className={({ isActive}) => isActive ? 'nav_link_active' : 'nav_link' }>Brouillons</NavLink>
       </div>
       <div className='navbar_items'>
         <p className='nav_link'>Tous les mots clé</p>
