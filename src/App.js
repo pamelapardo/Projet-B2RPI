@@ -9,6 +9,7 @@ import Profile from './pages/profile';
 import WikiBrouillons from './pages/wikiOutlets/wikiBrouillons';
 import MDEditorArticle from './components/mdEditorArticle';
 import AppLaunch from './components/componentApplications/appLaunch';
+import Todo from './components/componentApplications/firebaseTest';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route path='/wiki/*' element={<Wiki/>}>
          <Route path='*' element={<WikiLanding/>} /> 
           <Route path='*/all-articles' element={<WikiContent />} /> 
-          <Route path='*/brouillons/' element={<WikiBrouillons/>}/>
+          <Route path='*/brouillons/' element={<Todo/>}/>
           <Route path='*/redaction_article' element={<MDEditorArticle/>}/>
         </Route>
         <Route path='/profile/' element={<Profile/>}/>
