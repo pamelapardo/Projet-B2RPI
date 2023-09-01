@@ -11,6 +11,7 @@ a{
 }
 button{
   border: none;
+  font-family: 'Jost', sans-serif;
 }
 p{
   margin-block-start: 0.2em;
@@ -31,6 +32,7 @@ p{
   padding: 13px 40px;
   border-radius: 26px;
   transition: 0.2s;
+  cursor: pointer;
 
   &:hover{
     background-color: #f1f1f1;
@@ -59,6 +61,24 @@ p{
     background-color: #0E8388;
     -webkit-box-shadow: 0px 5px 10px -2px rgba(47,47,47,0.516); 
     box-shadow: 0px 3px 10px -2px rgba(47, 47, 47, 0.516);
+  }
+}
+.deco_btn{
+  background-color: #0E8388;
+  padding: 13px 40px;
+  border-radius: 26px;
+  transition: 0.2s;
+  cursor: pointer;
+  &:hover{
+    background-color: #f1f1f1;
+    -webkit-box-shadow: 0px 5px 10px -2px rgba(47,47,47,0.236); 
+    box-shadow: 0px 4px 7px -2px rgba(47, 47, 47, 0.236);
+  }
+  &:active{
+    background-color: #0E8388;
+    color: #f1f1f1;
+    -webkit-box-shadow: 0px 5px 10px -2px rgba(42, 42, 42, 0.36); 
+    box-shadow: 0px 3px 10px -2px rgba(42, 42, 42, 0.36);
   }
 }
 
@@ -139,4 +159,55 @@ p{
   height: 19px;
   width: 19px;
   margin-bottom: 4px;
+}
+
+
+// ----- MDEDITORARTICLE PAGE
+.mdeditor_page_container{
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  &.show{
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    pointer-events: visible;
+  }
+  & .wmde-markdown-var{
+    height: 100% !important;
+    overflow: hidden;
+  }
+  & .w-md-editor-preview{
+    background-color: #f1f1f1;
+  }
+  & .wmde-markdown{
+    background-color: transparent;
+    color: #222222;
+  }
+  & .w-md-editor{
+    --md-editor-background-color: #373737 !important;
+    --md-editor-box-shadow-color: #3f3f3f;
+    --md-editor-box-shadow-color: #585858;
+  }
+}
+.mdeditor_header{
+  background-color: #252525;
+  padding-right: 13px;
+  display: flex;
+  justify-content: flex-end;
+}
+.md_editor_btn{
+  background-color: #F2F2F2;
+  padding: 2px 15px;
+  border-radius: 30px;
+  margin: 9px 13px;
+  cursor: pointer;
+  font-family: "Jost", sans-serif;
+  font-size: 0.9em;
 }

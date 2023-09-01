@@ -13,11 +13,32 @@
   }
 }
 .appLaunch_page_container{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  animation-name: bounce;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  -webkit-box-shadow: 0px 5px 10px -2px rgba(47,47,47,0.36); 
+  box-shadow: 0px 3px 10px -2px rgba(47, 47, 47, 0.36);
+  opacity: 0;
+}
+.appLaunch_page_container_active{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: fixed;
+  z-index: 30;
   top: 0;
   left: 0;
   bottom: 0;
