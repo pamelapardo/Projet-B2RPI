@@ -20,6 +20,7 @@ function App() {
 
   return (
     <div className="h100">
+      <Header/>
       <Routes>
         {/* Si la connexion est reussite alors affiche le Header  */}
         {!isLoggedIn && <Route path="/*" element={<Login onLoginSuccess={LoginSuccess} />} />}
@@ -31,6 +32,7 @@ function App() {
           <Route path="*/brouillons/" element={<WikiContent />} />
         </Route>
         <Route path="/profile/" element={<Profile />} />
+
       </Routes>
     </div>
   );
