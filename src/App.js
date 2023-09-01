@@ -8,13 +8,14 @@ import Wiki from './pages/wiki';
 import WikiContent from './pages/wikiOutlets/wikiContent';
 import WikiLanding from './pages/wikiOutlets/wikiLanding';
 import Profile from './pages/profile';
-<<<<<<< HEAD
 import WikiBrouillons from './pages/wikiOutlets/wikiBrouillons';
 import MDEditorArticle from './components/mdEditorArticle';
 import AppLaunch from './components/componentApplications/appLaunch';
-=======
->>>>>>> c81ce5b (reprise des données)
 import Todo from './components/componentApplications/firebaseTest';
+// import WikiBrouillons from './pages/wikiOutlets/wikiBrouillons';
+import MDEditorArticle from './components/mdEditorArticle';
+import AppLaunch from './components/componentApplications/appLaunch';
+// import Todo from './components/componentApplications/firebaseTest';
 
 function App() {
   //Gestion du  changement de status 
