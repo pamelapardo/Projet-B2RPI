@@ -20,11 +20,13 @@ function App() {
 
   return (
     <div className="h100">
-      <Header/>
+      
       <Routes>
         {/* Si la connexion est reussite alors affiche le Header  */}
         {!isLoggedIn && <Route path="/*" element={<Login onLoginSuccess={LoginSuccess} />} />}
-        {isLoggedIn && <Header />}
+        {isLoggedIn && ( <Route path="/*" element={<Header />} /> )}
+        </Routes>
+        <Routes>
         <Route path="/" element={<Applications />} />
         <Route path="/wiki/*" element={<Wiki />}>
           <Route path="*" element={<WikiLanding />} />

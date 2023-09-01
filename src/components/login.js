@@ -3,14 +3,22 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+function Login(props) {
+  const [email, setEmail] = useState('test@test');
+  const [password, setPassword] = useState('test');
 
   const handleLogin = (e) => {
     e.preventDefault();
     // Ici, vous pouvez gérer la logique d'authentification
     console.log('Logging in with:', email, password);
+
+    if (email === 'test@test' && password === 'test') {
+      // Connexion réussie
+      props.onLoginSuccess();
+    } else {
+      // Connexion échouée
+      console.log('Login ou mot de passe incorrect.');
+    }
   };
 
   return (
