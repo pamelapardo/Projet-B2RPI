@@ -29,6 +29,9 @@ export default function Applications() {
   useEffect(() => {
     fetchPost();
   }, [])
+
+
+  
   return (
     <div className='app_page_container'>
       <div className='app_page_searchBar_container'>
