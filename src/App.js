@@ -24,7 +24,6 @@ function App() {
 
   return (
     <div className="h100">
-      <Header />
       <Routes>
         {/* Si la connexion est reussite alors affiche le Header  */}
         {!isLoggedIn && <Route path="/*" element={<Login onLoginSuccess={LoginSuccess} />} />}
