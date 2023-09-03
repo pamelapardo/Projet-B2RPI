@@ -22,9 +22,9 @@ export default function Applications() {
     //   })
     // }
     await getDocs(collection(db, "Apps")).then((querySnapshot) => {
-      const newData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-      setPosts(newData);
-      console.log(posts, newData);
+      const mapData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setPosts(mapData);
+      console.log(posts, mapData);
     })
   }
 
