@@ -7,9 +7,11 @@ import Wiki from './pages/wiki';
 import WikiContent from './pages/wikiOutlets/wikiContent';
 import WikiLanding from './pages/wikiOutlets/wikiLanding';
 import Profile from './pages/profile';
+<<<<<<< HEAD
 import WikiBrouillons from './pages/wikiOutlets/wikiBrouillons';
 import MDEditorArticle from './components/mdEditorArticle';
 import AppLaunch from './components/componentApplications/appLaunch';
+import Todo from './components/componentApplications/firebaseTest';
 
 function App() {
   //Gestion du  changement de status 
@@ -23,14 +25,19 @@ function App() {
   return (
     <div className="h100">
       <Routes>
-        <Route path='/' element={<Applications/>}/>
-        <Route path='/wiki/*' element={<Wiki/>}>
-         <Route path='*' element={<WikiLanding/>} /> 
-          <Route path='*/all-articles' element={<WikiContent />} /> 
-          <Route path='*/brouillons/' element={<WikiContent/>}/>
+        {/* Si la connexion est reussite alors affiche le Header  */}
+        {!isLoggedIn && <Route path="/*" element={<Login onLoginSuccess={LoginSuccess} />} />}
+        {isLoggedIn && ( <Route path="/*" element={<Header />} /> )}
+        </Routes>
+        <Routes>
+        <Route path="/" element={<Applications />} />
+        <Route path="/*  *//wiki/*" element={<Wiki />}>
+          <Route path="*" element={<WikiLanding />} />
+          <Route path="*/all-articles" element={<WikiContent />} />
+          <Route path="*/brouillons/" element={<WikiContent />} />
+          <Route path='*/redaction_article' element={<MDEditorArticle/>}/>
         </Route>
         <Route path='/profile/' element={<Profile/>}/>
-        <Route path='/appLaunch' element={<AppLaunch/>}/>
       </Routes>
     </div>
   );
