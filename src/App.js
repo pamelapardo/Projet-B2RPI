@@ -7,14 +7,9 @@ import Wiki from './pages/wiki';
 import WikiContent from './pages/wikiOutlets/wikiContent';
 import WikiLanding from './pages/wikiOutlets/wikiLanding';
 import Profile from './pages/profile';
-import WikiBrouillons from './pages/wikiOutlets/wikiBrouillons';
 import MDEditorArticle from './components/mdEditorArticle';
 import AppLaunch from './components/componentApplications/appLaunch';
-import Todo from './components/componentApplications/firebaseTest';
-// import WikiBrouillons from './pages/wikiOutlets/wikiBrouillons';
-import MDEditorArticle from './components/mdEditorArticle';
-import AppLaunch from './components/componentApplications/appLaunch';
-import Todo from './components/componentApplications/firebaseTest';
+import Login from '../src/components/login'
 
 function App() {
   //Gestion du  changement de status 
@@ -35,7 +30,7 @@ function App() {
         </Routes>
         <Routes>
         <Route path="/" element={<Applications />} />
-        <Route path="/*  *//wiki/*" element={<Wiki />}>
+        <Route path="/wiki/*" element={<Wiki />}>
           <Route path="*" element={<WikiLanding />} />
           <Route path="*/all-articles" element={<WikiContent />} />
           <Route path="*/brouillons/" element={<WikiContent />} />
