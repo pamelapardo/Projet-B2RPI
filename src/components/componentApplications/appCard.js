@@ -9,7 +9,7 @@ export default function AppCard(props) {
   return (
     <div>
       <div className='app_card_container' onClick={() => setShow(true)}>
-        <div className='app_card_logo'>{props.logo}</div>
+        <image src={props.logo} className='app_card_logo'/>
         <div className='app_card_txt_container'>
           <h3 className='card_app_title'>{props.title}</h3>
           <div>
