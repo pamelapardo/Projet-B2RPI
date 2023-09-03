@@ -8,6 +8,7 @@ import Wiki from './pages/wiki';
 import WikiContent from './pages/wikiOutlets/wikiContent';
 import WikiLanding from './pages/wikiOutlets/wikiLanding';
 import Profile from './pages/profile';
+import Todo from './components/componentApplications/firebaseTest';
 
 function App() {
   //Gestion du  changement de status 
@@ -32,8 +33,10 @@ function App() {
           <Route path="*" element={<WikiLanding />} />
           <Route path="*/all-articles" element={<WikiContent />} />
           <Route path="*/brouillons/" element={<WikiContent />} />
+          <Route path='*/redaction_article' element={<MDEditorArticle/>}/>
         </Route>
-        <Route path="/profile/" element={<Profile />} />
+        <Route path='/profile/' element={<Profile/>}/>
+        <Route path='/appLaunch' element={<AppLaunch/>}/>
 
       </Routes>
     </div>
