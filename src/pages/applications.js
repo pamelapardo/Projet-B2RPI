@@ -12,20 +12,19 @@ export default function Applications() {
 
   const [posts, setPosts] = useState([]);
   const fetchPost = async () => {
-
-    await getDocs(collection(db, "Apps"))
-      .then((querySnapshot) => {
-        const newData = querySnapshot.docs
-          .map((doc) => ({ ...doc.data(), id: doc.id }));
-        setPosts(newData);
-        console.log(posts, newData);
-      })
-
+    await getDocs(collection(db, "Apps")).then((querySnapshot) => {
+      const newData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setPosts(newData);
+      console.log(posts, newData);
+    })
   }
 
   useEffect(() => {
     fetchPost();
   }, [])
+
+
+  
   return (
     <div className='app_page_container'>
       <div className='app_page_searchBar_container'>
