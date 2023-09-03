@@ -5,14 +5,6 @@ import AppSearchBar from '../components/componentApplications/appSearchBar'
 import { db } from '../firebase';
 import { collection, getDocs } from "firebase/firestore";
 
-// const appList = [
-//   { logo: 'logo', title: 'Application 1', description: 'This is my app description in a few words.' },
-//   { logo: 'logo', title: 'Application 2', description: 'This is my app description in a few words.' },
-//   { logo: 'logo', title: 'Application 3', description: 'This is my app description in a few words.' },
-//   { logo: 'logo', title: 'Application 4', description: 'This is my app description in a few words.' },
-//   { logo: 'logo', title: 'Application 5', description: 'This is my app description in a few words.' },
-//   { logo: 'logo', title: 'Application 6', description: 'This is my app description in a few words.' },
-// ]
 
 export default function Applications() {
 
@@ -20,9 +12,9 @@ export default function Applications() {
 
   const fetchPost = async () => {
     await getDocs(collection(db, "Apps")).then((querySnapshot) => {
-      const newData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-      setPosts(newData);
-      console.log(posts, newData);
+      const mapData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setPosts(mapData);
+      console.log(posts, mapData);
     })
   }
 
@@ -30,7 +22,7 @@ export default function Applications() {
     fetchPost();
   }, [])
 
-
+// Also get images from Storage with their url
   
   return (
     <div className='app_page_container'>
@@ -39,11 +31,12 @@ export default function Applications() {
       </div>
       <div className='app_wrapper'>
 
-        {posts.map((todo, index) => {
+        {posts.map((app, index) => {
           return <AppCard
             key={index}
-            title={todo.appname}
-            description={todo.appdescription}
+            logo={app.img}
+            title={app.appname}
+            description={app.appdescription}
           />
         })}
 
