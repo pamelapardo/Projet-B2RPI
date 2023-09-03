@@ -12,6 +12,8 @@ import Profile from './pages/profile';
 import MDEditorArticle from './components/mdEditorArticle';
 import AppLaunch from './components/componentApplications/appLaunch';
 // import Todo from './components/componentApplications/firebaseTest';
+import WikiBrouillons from './pages/wikiOutlets/wikiBrouillons';
+import Todo from './components/componentApplications/firebaseTest';
 
 function App() {
   //Gestion du  changement de status 
