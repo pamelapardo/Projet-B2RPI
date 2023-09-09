@@ -15,6 +15,7 @@ import TableauDeBord from './pages/adminOutlets/tableauDeBord';
 import GestionUtilisateurs from './pages/adminOutlets/gestionUtilisateurs';
 import Metiers from './pages/adminOutlets/metiers';
 import Administration from './pages/adminOutlets/administration';
+import WikiBrouillons from './pages/wikiOutlets/wikiBrouillons';
 
 function App() {
   //Gestion du  changement de status 
@@ -37,7 +38,7 @@ function App() {
         <Route path="/wiki/*" element={<Wiki/>}>
           <Route path="*" element={<WikiLanding />} />
           <Route path="*/all-articles" element={<WikiContent />} />
-          <Route path="*/brouillons/" element={<WikiContent />} />
+          <Route path="*/brouillons/" element={<WikiBrouillons />} />
           <Route path='*/redaction_article' element={<MDEditorArticle />} />
         </Route>
         <Route path='/profile/' element={<Profile />} />
