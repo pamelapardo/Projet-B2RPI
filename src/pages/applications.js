@@ -4,6 +4,7 @@ import AppCard from '../components/componentApplications/appCard'
 import AppSearchBar from '../components/componentApplications/appSearchBar'
 import { db } from '../firebase';
 import { collection, getDocs } from "firebase/firestore";
+import { Link } from 'react-router-dom';
 
 
 export default function Applications() {
@@ -11,6 +12,15 @@ export default function Applications() {
   const [posts, setPosts] = useState([]);
 
   const fetchPost = async () => {
+    // Fetching data by field ------>
+    // const fetchPost = async () => {
+    //   const q = query(collection(db,'Apps'), where('app_id', '==', '1'));
+    //   await getDocs(q).then((querySnapshot) => {
+    //     const mapData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+    //     setPosts(mapData);
+    //     console.log(posts, mapData);
+    //   })
+    // }
     await getDocs(collection(db, "Apps")).then((querySnapshot) => {
       const mapData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
       setPosts(mapData);
@@ -22,12 +32,12 @@ export default function Applications() {
     fetchPost();
   }, [])
 
-// Also get images from Storage with their url
   
   return (
     <div className='app_page_container'>
       <div className='app_page_searchBar_container'>
         <AppSearchBar />
+        <Link to='/admin-Tableau-de-bord/*/tableau-de-bord'>------BUTTON TO ADMIN PAGE</Link>
       </div>
       <div className='app_wrapper'>
 
