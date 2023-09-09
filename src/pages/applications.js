@@ -32,12 +32,12 @@ export default function Applications() {
     fetchPost();
   }, [])
 
-// Also get images from Storage with their url
   
   return (
     <div className='app_page_container'>
       <div className='app_page_searchBar_container'>
         <AppSearchBar />
+        <Link to='/admin-Tableau-de-bord/*/tableau-de-bord'>------BUTTON TO ADMIN PAGE</Link>
       </div>
       <div className='app_wrapper'>
 
