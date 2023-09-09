@@ -1,25 +1,28 @@
 import './login.scss';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from './auth'; // Importez le service d'authentification de votre fichier auth.js
 
 function Login(props) {
-  const [email, setEmail] = useState('test@test');
-  const [password, setPassword] = useState('test');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    // Ici, vous pouvez gérer la logique d'authentification
-    console.log('Logging in with:', email, password);
 
-    if (email === 'test@test' && password === 'test') {
+    try {
+      // Utilisez le service d'authentification importé pour vous connecter
+      const userCheck = await signInWithEmailAndPassword(auth, email, password);
       // Connexion réussie
+      console.log('Logged in as:', userCheck.user.email);
       props.onLoginSuccess();
-    } else {
-      // Connexion échouée
-      console.log('Login ou mot de passe incorrect.');
+    } catch (error) {
+      // Gérer les erreurs d'authentification
+      console.error('Login failed:', error.message);
     }
   };
+
 
   return (
     <div className="container">

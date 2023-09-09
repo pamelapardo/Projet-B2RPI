@@ -9,8 +9,6 @@ import WikiContent from './pages/wikiOutlets/wikiContent';
 import WikiLanding from './pages/wikiOutlets/wikiLanding';
 import Profile from './pages/profile';
 import WikiBrouillons from './pages/wikiOutlets/wikiBrouillons';
-import MDEditorArticle from './components/mdEditorArticle';
-import AppLaunch from './components/componentApplications/appLaunch';
 import Todo from './components/componentApplications/firebaseTest';
 // import WikiBrouillons from './pages/wikiOutlets/wikiBrouillons';
 import MDEditorArticle from './components/mdEditorArticle';
@@ -43,7 +41,6 @@ function App() {
         </Route>
         <Route path='/profile/' element={<Profile/>}/>
         <Route path='/appLaunch' element={<AppLaunch/>}/>
-
       </Routes>
     </div>
   );
