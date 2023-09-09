@@ -274,6 +274,10 @@ input {
   cursor: pointer;
   font-family: "Jost", sans-serif;
   font-size: 0.9em;
+  &.quitter:hover{
+    transition: 0.5s;
+    background-color: #FF9E9E;
+  }
 }
 
 

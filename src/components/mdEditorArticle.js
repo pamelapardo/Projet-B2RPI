@@ -8,7 +8,7 @@ export default function MDEditorArticle(props) {
       <div className='mdeditor_header'>
         <button className='md_editor_btn'>Enregistrer</button>
         <button className='md_editor_btn'>Détails</button>
-        <button onClick={props.onClose} className='md_editor_btn'>Quitter</button>
+        <button onClick={props.onClose} className='md_editor_btn quitter'>Quitter</button>
       </div>
       <MDEditor value={value} onChange={setValue} />
       <MDEditor.Markdown source={value} style={{ whiteSpace: 'pre-wrap' }} />
