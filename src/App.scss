@@ -149,6 +149,7 @@ input {
 .wiki_total_articles_container {
   display: flex;
   flex-wrap: wrap;
+  align-items: start;
   gap: 20px 30px;
   margin-top: 20px;
   padding-bottom: 40px;
@@ -277,6 +278,39 @@ input {
     transition: 0.5s;
     background-color: #FF9E9E;
   }
+}
+
+
+
+
+// ----------------------------------------------- TABLE OF CONTENTS STYLE
+.table_container {
+  overflow-y: scroll;
+}
+
+.gestion_height {
+  height: calc(100% - 34px);
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  padding: 8px;
+  background-color: #DCDCDC;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #F5F4F4;
 }
 
 
