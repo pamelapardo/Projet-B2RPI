@@ -274,43 +274,6 @@ input {
   cursor: pointer;
   font-family: "Jost", sans-serif;
   font-size: 0.9em;
-  &.quitter:hover{
-    transition: 0.5s;
-    background-color: #FF9E9E;
-  }
-}
-
-
-
-
-// ----------------------------------------------- TABLE OF CONTENTS STYLE
-.table_container {
-  overflow-y: scroll;
-}
-
-.gestion_height {
-  height: calc(100% - 34px);
-}
-
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th {
-  text-align: left;
-  padding: 8px;
-  background-color: #DCDCDC;
-}
-
-td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #F5F4F4;
 }
 
 
