@@ -1,52 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500;600&display=swap');
-a{
+
+a {
   border: none;
   font-family: 'Jost', sans-serif;
   font-weight: 400;
   cursor: pointer;
   text-decoration: none;
-  &:visited{
+
+  &:visited {
     color: #222222;
   }
 }
-button{
+
+button {
   border: none;
   font-family: 'Jost', sans-serif;
 }
-p{
+
+p {
   margin-block-start: 0.2em;
   margin-block-end: 0.2em;
 }
 
+h1 {
+  margin-block-end: 0.2em !important;
+}
 
-/* ---- GENERAL HEIGHTS */
-.h100{
+h3 {
+  margin-block-end: 0.2em !important;
+}
+
+input {
+  padding: 11px 15px;
+  border-radius: 30px;
+  border: solid 1px #DEDEDE;
+  font-size: 0.8em;
+  margin-top: 4px;
+  margin-bottom: 17px;
+}
+
+
+
+
+/* ----------------------------------------------- GENERAL HEIGHTS */
+.h100 {
   height: 100vh;
   overflow: auto;
 }
 
 
-/* ---- ALL BUTTONS STYLES */
-.common_btn{
+
+
+/* ----------------------------------------------- ALL BUTTONS STYLES */
+.common_btn {
   background-color: white;
   padding: 13px 40px;
   border-radius: 26px;
   transition: 0.2s;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     background-color: #f1f1f1;
-    -webkit-box-shadow: 0px 5px 10px -2px rgba(47,47,47,0.236); 
+    -webkit-box-shadow: 0px 5px 10px -2px rgba(47, 47, 47, 0.236);
     box-shadow: 0px 4px 7px -2px rgba(47, 47, 47, 0.236);
   }
-  &:active{
+
+  &:active {
     background-color: #0E8388;
     color: #f1f1f1;
-    -webkit-box-shadow: 0px 5px 10px -2px rgba(42, 42, 42, 0.36); 
+    -webkit-box-shadow: 0px 5px 10px -2px rgba(42, 42, 42, 0.36);
     box-shadow: 0px 3px 10px -2px rgba(42, 42, 42, 0.36);
   }
 }
-.writeArticle_btn{
+
+.writeArticle_btn {
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -57,45 +84,54 @@ p{
   margin-left: 2vw;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  &:hover{
+
+  &:hover {
     background-color: #0E8388;
-    -webkit-box-shadow: 0px 5px 10px -2px rgba(47,47,47,0.516); 
+    -webkit-box-shadow: 0px 5px 10px -2px rgba(47, 47, 47, 0.516);
     box-shadow: 0px 3px 10px -2px rgba(47, 47, 47, 0.516);
   }
 }
-.deco_btn{
+
+.deco_btn {
   background-color: #0E8388;
   padding: 13px 40px;
   border-radius: 26px;
   transition: 0.2s;
   cursor: pointer;
-  &:hover{
+
+  &:hover {
     background-color: #f1f1f1;
-    -webkit-box-shadow: 0px 5px 10px -2px rgba(47,47,47,0.236); 
+    -webkit-box-shadow: 0px 5px 10px -2px rgba(47, 47, 47, 0.236);
     box-shadow: 0px 4px 7px -2px rgba(47, 47, 47, 0.236);
   }
-  &:active{
+
+  &:active {
     background-color: #0E8388;
     color: #f1f1f1;
-    -webkit-box-shadow: 0px 5px 10px -2px rgba(42, 42, 42, 0.36); 
+    -webkit-box-shadow: 0px 5px 10px -2px rgba(42, 42, 42, 0.36);
     box-shadow: 0px 3px 10px -2px rgba(42, 42, 42, 0.36);
   }
 }
 
 
-//----- APP PAGE FORMAT
-.app_page_container{
+
+
+// ----------------------------------------------- APP PAGE FORMAT
+.app_page_container {
   height: calc(100% - 2em);
 }
 
 
-//----- WIKI PAGE FORMAT
-.wiki_page_container{
+
+
+//----------------------------------------------- WIKI PAGE FORMAT
+.wiki_page_container {
   display: flex;
   flex-direction: row;
   height: calc(100% - 2em);
 }
-.wiki_page_outlet_container{
+
+.wiki_page_outlet_container {
   display: flex;
   flex-direction: column;
   margin-right: 20px;
@@ -104,67 +140,87 @@ p{
   width: calc(93vw - 80px);
   height: calc(98vh - 2em);
 }
+
 .masked_overflow {
   -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 98%);
   mask-image: linear-gradient(to bottom, black 90%, transparent 98%);
 }
-.wiki_total_articles_container{
+
+.wiki_total_articles_container {
   display: flex;
   flex-wrap: wrap;
-  align-items: start;
+  align-items: flex-start;
   gap: 20px 30px;
   margin-top: 20px;
   padding-bottom: 40px;
   overflow-y: scroll;
   // height: calc(80vh - 107px);
 }
-.sort_container{
+
+.sort_container {
   display: flex;
   align-items: center;
   gap: 11px;
 }
-.trier_text{
+
+.trier_text {
   font-size: 0.9em;
   color: #b0b0b0;
 }
-.sort_btn_tout{
+
+.sort_btn_tout {
   padding: 7px 15px;
   border-radius: 30px;
   background-color: #DEDEDE;
 }
-.sort_btn_solution{
+
+.sort_btn_solution {
   padding: 7px 15px;
   border-radius: 30px;
   background-color: #A4C069;
 }
-.sort_btn_proc{
+
+.sort_btn_proc {
   padding: 7px 15px;
   border-radius: 30px;
   background-color: #45D7CE;
 }
-.sort_btn_docu{
+
+.sort_btn_docu {
   padding: 7px 15px;
   border-radius: 30px;
   background-color: #C096E0;
 }
 
 
-// ---- ICONS
-.loupe{
+
+
+// ----------------------------------------------- ICONS
+.loupe {
   background-image: url(./images/loupe.svg);
   height: 19px;
   width: 19px;
 }
-.edit_icon{
+
+.edit_icon {
   background-image: url(./images/write_icon.svg );
   height: 19px;
   width: 19px;
   margin-bottom: 4px;
 }
 
+.separator {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 100%;
+  border-bottom: solid 1px #D2D2D2;
+}
 
-// ----- MDEDITORARTICLE PAGE
-.mdeditor_page_container{
+
+
+
+// ----------------------------------------------- MDEDITORARTICLE PAGE
+.mdeditor_page_container {
   z-index: 10;
   top: 0;
   bottom: 0;
@@ -175,35 +231,42 @@ p{
   opacity: 0;
   transition: all 0.3s ease-in-out;
   pointer-events: none;
-  &.show{
+
+  &.show {
     opacity: 1;
     transition: all 0.3s ease-in-out;
     pointer-events: visible;
   }
-  & .wmde-markdown-var{
+
+  & .wmde-markdown-var {
     height: 100% !important;
     overflow: hidden;
   }
-  & .w-md-editor-preview{
+
+  & .w-md-editor-preview {
     background-color: #f1f1f1;
   }
-  & .wmde-markdown{
+
+  & .wmde-markdown {
     background-color: transparent;
     color: #222222;
   }
-  & .w-md-editor{
+
+  & .w-md-editor {
     --md-editor-background-color: #373737 !important;
     --md-editor-box-shadow-color: #3f3f3f;
     --md-editor-box-shadow-color: #585858;
   }
 }
-.mdeditor_header{
+
+.mdeditor_header {
   background-color: #252525;
   padding-right: 13px;
   display: flex;
   justify-content: flex-end;
 }
-.md_editor_btn{
+
+.md_editor_btn {
   background-color: #F2F2F2;
   padding: 2px 15px;
   border-radius: 30px;
@@ -211,4 +274,37 @@ p{
   cursor: pointer;
   font-family: "Jost", sans-serif;
   font-size: 0.9em;
+}
+
+
+
+
+// ----------------------------------------------- TABLE OF CONTENTS STYLE
+.table_container {
+  overflow-y: scroll;
+}
+
+.gestion_height {
+  height: calc(100% - 34px);
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  padding: 8px;
+  background-color: #DCDCDC;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #F5F4F4;
 }
