@@ -65,6 +65,15 @@ function App() {
 
         </Route>
 
+        {/* PAGES ADMIN - Route temporaire */}
+        <Route path='/admin-Tableau-de-bord/*' element={<AdminPages/>}>
+          <Route default path='*/tableau-de-bord' element={<TableauDeBord/>}/>
+          <Route path='*/gestion-de-utilisateurs' element={<GestionUtilisateurs/>}/>
+          <Route path='*/metiers' element={<Metiers/>}/>
+          <Route path='*/administration' element={<Administration/>}/>
+
+        </Route>
+
       </Routes>
 
 

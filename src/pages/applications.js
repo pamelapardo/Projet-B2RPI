@@ -12,6 +12,15 @@ export default function Applications() {
 
   const [posts, setPosts] = useState([]);
   const fetchPost = async () => {
+    // Fetching data by field ------>
+    // const fetchPost = async () => {
+    //   const q = query(collection(db,'Apps'), where('app_id', '==', '1'));
+    //   await getDocs(q).then((querySnapshot) => {
+    //     const mapData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+    //     setPosts(mapData);
+    //     console.log(posts, mapData);
+    //   })
+    // }
     await getDocs(collection(db, "Apps")).then((querySnapshot) => {
       const newData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
       setPosts(newData);
@@ -23,7 +32,7 @@ export default function Applications() {
     fetchPost();
   }, [])
 
-
+// Also get images from Storage with their url
   
   return (
     <div className='app_page_container'>
