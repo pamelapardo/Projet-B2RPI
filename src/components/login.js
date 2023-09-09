@@ -1,18 +1,13 @@
 import './login.scss';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase'; // Importez le service d'authentification de votre fichier auth.js
+
 
 function Login(props) {
-  // Déclarer l'etat de email  
-  const [email, setEmail] = useState('');
-  // Déclarer l'etat du mot de passe 
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('test@test');
+  const [password, setPassword] = useState('test');
 
-  // Envoie du formulaire 
-  const handleLogin = async (e) => {
-    //Empecher le rafraichissement de la page 
+  const handleLogin = (e) => {
     e.preventDefault();
 
     try {

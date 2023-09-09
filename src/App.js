@@ -7,6 +7,7 @@ import Wiki from './pages/wiki';
 import WikiContent from './pages/wikiOutlets/wikiContent';
 import WikiLanding from './pages/wikiOutlets/wikiLanding';
 import Profile from './pages/profile';
+import WikiBrouillons from './pages/wikiOutlets/wikiBrouillons';
 import MDEditorArticle from './components/mdEditorArticle';
 import AppLaunch from './components/componentApplications/appLaunch';
 import Login from '../src/components/login'
@@ -42,8 +43,8 @@ function App() {
           <Route path="*/brouillons/" element={<WikiBrouillons />} />
           <Route path='*/redaction_article' element={<MDEditorArticle />} />
         </Route>
-        <Route path='/profile/' element={<Profile/>}/>
-        <Route path='/appLaunch' element={<AppLaunch/>}/>
+        <Route path='/profile/' element={<Profile />} />
+        <Route path='/appLaunch' element={<AppLaunch />} />
 
         {/* PAGES ADMIN - Route temporaire */}
         <Route path='/admin-Tableau-de-bord/*' element={<AdminPages/>}>
