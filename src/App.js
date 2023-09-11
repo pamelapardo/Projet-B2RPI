@@ -16,7 +16,6 @@ import TableauDeBord from './pages/adminOutlets/tableauDeBord';
 import GestionUtilisateurs from './pages/adminOutlets/gestionUtilisateurs';
 import Metiers from './pages/adminOutlets/metiers';
 import Administration from './pages/adminOutlets/administration';
-import WikiBrouillons from './pages/wikiOutlets/wikiBrouillons';
 
 function App() {
   //Gestion du  changement de status 

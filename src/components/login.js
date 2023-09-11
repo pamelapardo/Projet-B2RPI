@@ -2,7 +2,7 @@ import './login.scss';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from './auth'; // Importez le service d'authentification de votre fichier auth.js
+import { auth } from '../firebase'; // Importez le service d'authentification de votre fichier auth.js
 
 function Login(props) {
   const [email, setEmail] = useState('');
