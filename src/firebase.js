@@ -22,6 +22,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const storage = getStorage(app, "gs://arkhe-db.appspot.com");
-const auth = getFirestore(app);
+const auth = getAuth(app);
 
 export { db, storage, auth };
