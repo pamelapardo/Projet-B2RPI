@@ -24,7 +24,6 @@ export default function Applications() {
     await getDocs(collection(db, "Apps")).then((querySnapshot) => {
       const mapData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
       setPosts(mapData);
-      console.log(posts, mapData);
     })
   }
 
