@@ -16,6 +16,7 @@ import TableauDeBord from './pages/adminOutlets/tableauDeBord';
 import GestionUtilisateurs from './pages/adminOutlets/gestionUtilisateurs';
 import Metiers from './pages/adminOutlets/metiers';
 import Administration from './pages/adminOutlets/administration';
+import ModifiedPassword from './components/modifiedPassword';
 
 function App() {
   //Gestion du  changement de status 
@@ -29,10 +30,13 @@ function App() {
   return (
     <div className="h100">
       <Routes>
+        
         {/* Si la connexion est reussite alors affiche le Header  */}
         {!isLoggedIn && <Route path="/*" element={<Login onLoginSuccess={LoginSuccess} />} />}
         {isLoggedIn && (<Route path="/*" element={<Header />} />)}
+      <Route path="/modifiedPassword" Component={ModifiedPassword} />
       </Routes>
+      
       <Routes>
         <Route path="/" element={<Applications />} />
         <Route path="/wiki/*" element={<Wiki />}>

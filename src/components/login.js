@@ -5,10 +5,14 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase'; // Importez le service d'authentification de votre fichier auth.js
 
 function Login(props) {
+  // Déclarer l'etat de email  
   const [email, setEmail] = useState('');
+  // Déclarer l'etat du mot de passe 
   const [password, setPassword] = useState('');
 
+  // Envoie du formulaire 
   const handleLogin = async (e) => {
+    //Empecher le rafraichissement de la page 
     e.preventDefault();
 
     try {
@@ -48,9 +52,9 @@ function Login(props) {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button className='btn-Submit' type="submit">Se connecter</button>
+        <button className='.common_btn' type="submit">Se connecter</button>
       </form>
-      <Link to="/forgot-password">Mot de passe oublié?</Link>
+      <Link to="/modifiedPassword">Mot de passe oublié?</Link>
     </div>
   );
 }
