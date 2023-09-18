@@ -42,20 +42,6 @@ function App() {
         </Route>
 
       </Routes>
-      </div>
-    
-      <Routes>
-        <Route path="/redirect/*" element={<Header/>}>
-          <Route path="*/Application" element={<Applications />} />
-          <Route path="*/wiki/*" element={<Wiki />}>
-            <Route path="*" element={<WikiLanding />} />
-            <Route path="*/all-articles" element={<WikiContent />} />
-            <Route path="*/brouillons/" element={<WikiBrouillons />} />
-            <Route path='*/redaction_article' element={<MDEditorArticle />} />
-          </Route>
-          <Route path='*/profil' element={<Profile />} />
-          <Route path='*/appLaunch' element={<AppLaunch />} />
-        </Route>
 
         {/* PAGES ADMIN - Route temporaire */}
         <Route path='/admin-Tableau-de-bord/*' element={<AdminPages/>}>
@@ -66,14 +52,6 @@ function App() {
 
         </Route>
 
-        {/* PAGES ADMIN - Route temporaire */}
-        <Route path='/admin-Tableau-de-bord/*' element={<AdminPages/>}>
-          <Route default path='*/tableau-de-bord' element={<TableauDeBord/>}/>
-          <Route path='*/gestion-de-utilisateurs' element={<GestionUtilisateurs/>}/>
-          <Route path='*/metiers' element={<Metiers/>}/>
-          <Route path='*/administration' element={<Administration/>}/>
-
-        </Route>
 
       </Routes>
 
