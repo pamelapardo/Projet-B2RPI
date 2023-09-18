@@ -3,14 +3,14 @@ import '../components/componentApplications/appCard.scss'
 import AppCard from '../components/componentApplications/appCard'
 import AppSearchBar from '../components/componentApplications/appSearchBar'
 import { db } from '../firebase';
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, storage } from "firebase/firestore";
 import { Link } from 'react-router-dom';
+import { ref, listAll } from "firebase/storage";
 
 
 export default function Applications() {
 
   const [posts, setPosts] = useState([]);
-
   const fetchPost = async () => {
     // Fetching data by field ------>
     // const fetchPost = async () => {
