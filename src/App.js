@@ -32,28 +32,20 @@ function App() {
       <Routes>
         {/* Si la connexion est reussite alors affiche le Header  */}
         {!isLoggedIn && <Route path="/*" element={<Login onLoginSuccess={LoginSuccess} />} />}
-        {isLoggedIn && (<Route path="/*" element={<Header />} />)}
-        <Route path="/modifiedPassword" Component={ModifiedPassword} />
+        {isLoggedIn && (<Route path="/*" Component={<Header />} />)}
+      <Route path="/modifiedPassword" Component={ModifiedPassword} />
       </Routes>
+      
       <Routes>
-        <Route path="/" element={<Applications />} />
+        <Route path="/Application" element={<Applications />} />
         <Route path="/wiki/*" element={<Wiki />}>
           <Route path="*" element={<WikiLanding />} />
           <Route path="*/all-articles" element={<WikiContent />} />
           <Route path="*/brouillons/" element={<WikiBrouillons />} />
           <Route path='*/redaction_article' element={<MDEditorArticle />} />
         </Route>
-        <Route path='/profile/' element={<Profile />} />
-        <Route path='/appLaunch' element={<AppLaunch />} />
-
-        {/* PAGES ADMIN - Route temporaire */}
-        <Route path='/admin-Tableau-de-bord/*' element={<AdminPages />}>
-          <Route default path='*/tableau-de-bord' element={<TableauDeBord />} />
-          <Route path='*/gestion-de-utilisateurs' element={<GestionUtilisateurs />} />
-          <Route path='*/metiers' element={<Metiers />} />
-          <Route path='*/administration' element={<Administration />} />
-
-        </Route>
+        <Route path='/profile/' element={<Profile/>}/>
+        <Route path='/appLaunch' element={<AppLaunch/>}/>
       </Routes>
     </div>
   );

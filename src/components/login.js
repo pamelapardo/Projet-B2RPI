@@ -5,10 +5,14 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase'; // Importez le service d'authentification de votre fichier auth.js
 
 function Login(props) {
-  const [email, setEmail] = useState('test@test');
-  const [password, setPassword] = useState('test');
+  // Déclarer l'etat de email  
+  const [email, setEmail] = useState('');
+  // Déclarer l'etat du mot de passe 
+  const [password, setPassword] = useState('');
 
+  // Envoie du formulaire 
   const handleLogin = async (e) => {
+    //Empecher le rafraichissement de la page 
     e.preventDefault();
 
     try {
@@ -22,7 +26,8 @@ function Login(props) {
       console.error('Login failed:', error.message);
     }
   };
-  
+
+
   return (
     <div className="container">
       <h2>ARKHE</h2>
