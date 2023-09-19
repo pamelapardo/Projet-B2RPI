@@ -15,7 +15,7 @@ apt install -y git
 
 # Cloner le dépôt Git dans le répertoire du site Apache
 cd /var/www/html
-git clone https://github.com/pamelapardo/Projet-B2RPI
+git clone https://github.com/pamelapardo/arkhe_build
 
 # Redémarrer Apache pour appliquer les modifications
 systemctl restart apache2
