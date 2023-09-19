@@ -19,7 +19,7 @@ git clone https://github.com/pamelapardo/arkhe_build
 
 # Modifier le chemin dans le fichier de configuration Apache
 ancien_chemin="/var/www/html"
-nouveau_chemin="/var/www/html/arkhe_built"
+nouveau_chemin="/var/www/html/arkhe_build"
 fichier_config="/etc/apache2/sites-available/000-default.conf"
 sed -i "s|$ancien_chemin|$nouveau_chemin|g" "$fichier_config"
 
