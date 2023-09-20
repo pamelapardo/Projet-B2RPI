@@ -30,7 +30,7 @@ export default function WikiContent() {
   return (
     <>
       <WikiSearchBar/>
-      <div className='wiki_total_articles_container masked_overflow'>
+      <div className='wiki_total_articles_container masked_overflow jhdvkjwdvkwajdh'>
         {articles.map((articleSrc, index) => {
           return (
             <WikiCard
