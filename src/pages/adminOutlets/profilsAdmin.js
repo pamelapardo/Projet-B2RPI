@@ -34,7 +34,7 @@ export default function GestionUtilisateurs() {
 
 
 
-                <div className='test'>
+                <div className='list_info_user'>
                     <div className='detail_info_user'>
                         <div className='profil_admin_infos'>
                             <div className='administration_form_container'>
