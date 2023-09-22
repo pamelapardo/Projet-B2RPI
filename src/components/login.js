@@ -60,6 +60,8 @@ function Login(props) {
         <Link onClick={onLogin} className='btn-Submit' type="submit">Se connecter</Link>
       </form>
       <Link to="/modifiedPassword">Mot de passe oublié?</Link>
+      </form>
+      <Link to="/loginAdmin">Se connecter en tant qu’administrateur </Link>
     </div>
   );
 }
