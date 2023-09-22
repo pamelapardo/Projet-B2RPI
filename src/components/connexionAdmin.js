@@ -1,45 +1,33 @@
 import './login.scss';
-import React, { useState } from 'react';
-import { Link, Navigate, Route } from 'react-router-dom';
+import { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase'; // Importez le service d'authentification de votre fichier auth.js
 
-function Login(props) {
+function ConnexionAdmin(props) {
   // Déclarer l'etat de email  
   const [email, setEmail] = useState('');
   // Déclarer l'etat du mot de passe 
   const [password, setPassword] = useState('');
 
-  // Envoie du formulaire 
-  const handleLogin = async (e) => {
-    // Empecher le rafraichissement de la page 
+  const handleLoginAdmin = async (e) => {
     e.preventDefault();
-
+  
     try {
-      // Utilisez le service d'authentification importé pour vous connecter
-      const userCheck = await signInWithEmailAndPassword(auth, email, password);
-
-      // Vérifiez si l'utilisateur est administrateur (adapté à votre structure de données)
-      if (userCheck.user.email === 'admin@mail.com' && userCheck.user.isAdmin) {
-        // Redirigez l'administrateur vers la page admin
-        return <Navigate to='/admin-Tableau-de-bord/*'/>;
-      }
-
-      // Connexion réussie pour un utilisateur normal
-      console.log('Logged in as user:', userCheck.user.email);
-      props.onLoginSuccess();
+      const userCheckAdmin = await signInWithEmailAndPassword(auth, email, password);
+      console.log("Logged in as:", userCheckAdmin.user.email);
+      // Appeler la fonction de succès transmise via les props
+      props.onLoginSuccessAdmin();
     } catch (error) {
-      // Gérer les erreurs d'authentification
-      console.error('Login failed:', error.message);
+      console.error("Login failed:", error.message);
     }
   };
-
-
   return (
     <div className="container">
       <h2>ARKHE</h2>
-       <p>Connexion Utilisateur </p>
-      <form onSubmit={handleLogin}>
+       <p>Connexion Administrateur </p>
+      <form onSubmit={handleLoginAdmin}>
         <div className="form-group">
           <label htmlFor="email">E-mail:</label>
           <input
@@ -64,9 +52,8 @@ function Login(props) {
         <br/>
       <Link to="/modifiedPassword">Mot de passe oublié?</Link>
       </form>
-      <Link to="/loginAdmin">Se connecter en tant qu’administrateur </Link>
+      <Link to="/">Se connecter en tant qu’utilisateur </Link>
     </div>
   );
 }
-
-export default Login;
+export default ConnexionAdmin;

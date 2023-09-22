@@ -16,14 +16,21 @@ import TableauDeBord from './pages/adminOutlets/tableauDeBord';
 import GestionUtilisateurs from './pages/adminOutlets/gestionUtilisateurs';
 import Metiers from './pages/adminOutlets/metiers';
 import Administration from './pages/adminOutlets/administration';
+import ModifiedPassword from './components/modifiedPassword';
+import ConnexionAdmin from './components/connexionAdmin';
 
 function App() {
   //Gestion du  changement de status 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedInAdmin, setIsLoggedInAdmin] = useState(false);
 
   //Fonction pour savoir si la connexion est reussite 
   const LoginSuccess = () => {
     setIsLoggedIn(true);
+  };
+
+  const LoginSuccessAdmin  = () => {
+    setIsLoggedInAdmin(true);
   };
 
   return (
@@ -32,6 +39,8 @@ function App() {
         {/* Si la connexion est reussite alors affiche le Header  */}
         {!isLoggedIn && <Route path="/*" element={<Login onLoginSuccess={LoginSuccess} />} />}
         {isLoggedIn && (<Route path="/*" element={<Header />} />)}
+        <Route path="/modifiedPassword" element={<ModifiedPassword/>} />
+        <Route path="/loginAdmin" element={<ConnexionAdmin/>} />
       </Routes>
       <Routes>
         <Route path="/" element={<Applications />} />
@@ -44,6 +53,13 @@ function App() {
         <Route path='/profile/' element={<Profile />} />
         <Route path='/appLaunch' element={<AppLaunch />} />
 
+        <Routes>
+        {/* Si la connexion est reussite alors affiche le Header  */}
+        {!isLoggedInAdmin && <Route path="/loginAdmin" element={<ConnexionAdmin onLoginSuccess={LoginSuccessAdmin} />} />}
+        {isLoggedInAdmin && (<Route path="/*" element={<Header />} />)}
+        <Route path="/modifiedPassword" element={<ModifiedPassword/>} />
+        <Route path="/*" element={<Login/>} />
+      </Routes>
         {/* PAGES ADMIN - Route temporaire */}
         <Route path='/admin-Tableau-de-bord/*' element={<AdminPages />}>
           <Route default path='*/tableau-de-bord' element={<TableauDeBord />} />
