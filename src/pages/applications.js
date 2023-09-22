@@ -3,22 +3,14 @@ import '../components/componentApplications/appCard.scss'
 import AppCard from '../components/componentApplications/appCard'
 import AppSearchBar from '../components/componentApplications/appSearchBar'
 import { db } from '../firebase';
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, storage } from "firebase/firestore";
 import { Link } from 'react-router-dom';
+import { ref, listAll } from "firebase/storage";
 
-// const appList = [
-//   { logo: 'logo', title: 'Application 1', description: 'This is my app description in a few words.' },
-//   { logo: 'logo', title: 'Application 2', description: 'This is my app description in a few words.' },
-//   { logo: 'logo', title: 'Application 3', description: 'This is my app description in a few words.' },
-//   { logo: 'logo', title: 'Application 4', description: 'This is my app description in a few words.' },
-//   { logo: 'logo', title: 'Application 5', description: 'This is my app description in a few words.' },
-//   { logo: 'logo', title: 'Application 6', description: 'This is my app description in a few words.' },
-// ]
 
 export default function Applications() {
 
   const [posts, setPosts] = useState([]);
-
   const fetchPost = async () => {
     // Fetching data by field ------>
     // const fetchPost = async () => {
@@ -47,12 +39,17 @@ export default function Applications() {
       <div className='app_page_searchBar_container'>
         <AppSearchBar />
         <Link to='/admin-Tableau-de-bord/*/tableau-de-bord'>------BUTTON TO ADMIN PAGE</Link>
+        <Link to='/admin-Tableau-de-bord/*/tableau-de-bord'>------BUTTON TO ADMIN PAGE</Link>
       </div>
       <div className='app_wrapper'>
 
         {posts.map((app, index) => {
+        {posts.map((app, index) => {
           return <AppCard
             key={index}
+            logo={app.img}
+            title={app.appname}
+            description={app.appdescription}
             logo={app.img}
             title={app.appname}
             description={app.appdescription}

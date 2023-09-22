@@ -1,11 +1,36 @@
 import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import WikiSearchBar from '../../components/wikiSearchBar'
 import WikiCard from '../../components/componentWiki/wikiCard'
 import { db } from '../../firebase';
 import { collection, getDocs } from "firebase/firestore";
 import '../../components/componentApplications/appCard.scss'
+import { db } from '../../firebase';
+import { collection, getDocs } from "firebase/firestore";
+import '../../components/componentApplications/appCard.scss'
 
 export default function WikiContent() {
+
+  const [articles, setArticles] = useState([]);
+  const articleType = {
+    Solution: '#A4C069',
+    Documentation: '#c096e0',
+    Procedure: '#45D7CE',
+  };
+
+  const fetchArticle = async () => {
+    await getDocs(collection(db, "Articles")).then((querySnapshot) => {
+      const mapArticles = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setArticles(mapArticles);
+    })
+  }
+
+  useEffect(() => {
+    fetchArticle();
+  }, [])
+
+
+
 
   const [articles, setArticles] = useState([]);
   const articleType = {

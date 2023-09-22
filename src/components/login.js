@@ -31,6 +31,9 @@ function Login(props) {
     } catch (error) {
       // Gérer les erreurs d'authentification
       console.error('Login failed:', error.message);
+    } catch (error) {
+      // Gérer les erreurs d'authentification
+      console.error('Login failed:', error.message);
     }
   };
 
