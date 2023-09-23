@@ -171,3 +171,98 @@
   justify-content: space-around;
   width: 90%;
 }
+
+// ***** Profil Admin
+.profil_container{
+  display: flex;
+  flex-direction: row;
+}
+
+.profil_admin_infos{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: fit-content;
+  width: 400px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 26px;
+  padding: 15px;
+  margin-left: 70px;
+  margin-top: 20px;
+  transition: 0.2s;
+  -webkit-box-shadow: 0px 5px 10px -2px rgba(62, 62, 62, 0.211); 
+    box-shadow: 0px 3px 10px -2px rgba(62, 62, 62, 0.211);
+}
+
+.info_user{
+  display: flex;
+  flex-direction: column;
+}
+.name_admin{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  color: gray;
+}
+.profile_photo_admin_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 200px;
+  margin-left: 100px;
+}
+
+.profilePicAdmin{
+  background-image: url(../images/profilePic.svg);
+  height: 79px;
+  width: 79px;
+  margin-right: 15px;
+}
+.detail_info_user{
+  display: flex;
+  flex-direction: column;
+}
+
+.list_info_user{
+  display: flex;
+  margin-left: 200px;
+}
+.admin_link{
+  margin-top: 25px;
+}
+.btn_supp_user{
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+
+// ***** Métier Admin
+.admin_container{
+  display: flex;
+  margin-top: 13px;
+}
+.title_admin_metier{
+  font-size: large;
+  margin-top: 8px;
+  margin-left: 20px;
+  font-size: 25px;
+}
+.list_admin_metier{
+  display: flex;
+}
+.btn_admin{
+  padding: 7px 15px;
+  border-radius: 30px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.btn_princip{
+  margin-top: 150px;
+  margin-left: 60px;
+
+}

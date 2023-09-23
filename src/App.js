@@ -14,6 +14,7 @@ import AdminPages from './pages/adminPages';
 import TableauDeBord from './pages/adminOutlets/tableauDeBord';
 import GestionUtilisateurs from './pages/adminOutlets/gestionUtilisateurs';
 import Metiers from './pages/adminOutlets/metiers';
+import MetierAdmin from './pages/adminOutlets/metierAdmin';
 import Administration from './pages/adminOutlets/administration';
 import ModifiedPassword from './components/modifiedPassword';
 import ConnexionAdmin from './components/connexionAdmin';
@@ -35,6 +36,7 @@ function App() {
           <Route path='*/gestion-de-utilisateurs' element={<GestionUtilisateurs />} />
           <Route path='*/profil-de-utilisateur' element={<ProfilsAdmin />} />
           <Route path='*/metiers' element={<Metiers />} />
+          <Route path='*/metier-admin' element={<MetierAdmin />} />
           <Route path='*/administration' element={<Administration />} />
         </Route>
       </Routes>
