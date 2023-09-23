@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link, Navigate, Route } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase'; // Importez le service d'authentification de votre fichier auth.js
+import { getFirestore, doc, getDoc } from 'firebase/firestore'; // Importez Firestore
 
 function Login(props) {
   // Déclarer l'etat de email  
@@ -33,7 +34,6 @@ function Login(props) {
       console.error('Login failed:', error.message);
     }
   };
-
 
   return (
     <div className="container">
