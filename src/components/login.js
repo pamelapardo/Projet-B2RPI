@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase'; // Importez le service d'authentification de votre fichier auth.js
+import { getFirestore, doc, getDoc } from 'firebase/firestore'; // Importez Firestore
 
 function Login(props) {
   const [email, setEmail] = useState('');
@@ -14,7 +15,6 @@ function Login(props) {
     try {
       // Utilisez le service d'authentification importé pour vous connecter
       const userCheck = await signInWithEmailAndPassword(auth, email, password);
-      // Connexion réussie
       console.log('Logged in as:', userCheck.user.email);
       
       if (email === 'admin@mail.com') {
@@ -29,7 +29,6 @@ function Login(props) {
       console.error('Login failed:', error.message);
     }
   };
-
 
   return (
     <div className="container">

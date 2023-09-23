@@ -28,6 +28,7 @@ function App(props) {
   // Fonction pour savoir si la connexion est réussie et stocker le rôle
   const LoginSuccess = () => {
     setIsLoggedIn(true);
+    setUserRole(role);
   };
 
   const LoginSuccessAdmin = () => {
