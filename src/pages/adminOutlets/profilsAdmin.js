@@ -24,6 +24,9 @@ export default function GestionUtilisateurs() {
             <div className='admin_link'>
                 <Link className='md_editor_btn' to="/admin-Tableau-de-bord/*/gestion-de-utilisateurs">Revenir en arrière</Link>
             </div>
+            <div className='admin_link'>
+                <Link className='md_editor_btn' to="/admin-Tableau-de-bord/*/gestion-de-utilisateurs">Revenir en arrière</Link>
+            </div>
             <div className='profil_container'>
                 <div className='profile_photo_admin_container'>
                     <div className='profilePicAdmin' />
@@ -173,7 +176,6 @@ export default function GestionUtilisateurs() {
             <div className='btn_supp_user'>
                 <button className='btn_admin'>Supprimer</button>
             </div>
-
         </div>
     )
 }
