@@ -445,3 +445,70 @@ tr:nth-child(even) {
 .label_style_wiki{
   padding-left: 15px;
 }
+
+// ----------------------------------------------- page wiki landing
+.wiki_btn{
+  background-color: #F2F2F2;
+  padding: 2px 15px;
+  border-radius: 30px;
+  margin: 9px 13px;
+  cursor: pointer;
+  font-family: "Jost", sans-serif;
+  font-size: 0.9em;
+}
+
+.infos_doc{
+  display: flex;
+  flex-direction: column;
+  margin-right: 65px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.article_doc{
+  font-size: small;
+  margin-top: 1px;
+
+}
+.infos_article{
+  margin-right: 80px;
+  margin-top: 35px;
+}
+.app_article{
+  font-size: x-large;
+  font-weight: bold;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+}
+.app_article{
+  font-size: x-large;
+  font-weight: bold;
+}
+.title_info_article{
+  font-size: small;
+}
+.title_article{
+  font-size: xx-large;
+  color: blue;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.title2_article{
+  font-size: x-large;
+  color: #939597;
+  font-weight: bold;
+}
+.title3_article{
+  font-size: large;
+  color: #939597;
+  font-weight: bold;
+}
+.label_style_wiki{
+  padding-left: 15px;
+}
