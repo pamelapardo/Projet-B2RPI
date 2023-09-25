@@ -4,7 +4,7 @@ import '../../components/componentApplications/appCard.scss'
 
 export default function WikiCard(articleSrc) {
   const cardStyle = {
-    backgroundColor: articleSrc.articleType[articleSrc.article_type], // Assuming article_type is the field that holds the type information
+    backgroundColor: articleSrc.articleType[articleSrc.article_type],
   };
 
   return (
