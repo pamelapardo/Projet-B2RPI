@@ -16,7 +16,6 @@ export default function GestionUtilisateurs() {
         fetchUsers();
     }, [])
 
-
     return (
         <div className='gestion_heigh'>
             <h1>Gestion d’utilisateurs</h1>
@@ -174,6 +173,7 @@ export default function GestionUtilisateurs() {
             <div className='btn_supp_user'>
                 <button className='btn_admin'>Supprimer</button>
             </div>
+
         </div>
     )
 }
