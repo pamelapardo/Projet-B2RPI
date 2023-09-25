@@ -9,7 +9,6 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 function Login(props) {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
-  // Déclarer l'etat du mot de passe 
   const [password, setPassword] = useState('');
 
   const onLogin = (e) => {
@@ -61,7 +60,7 @@ function Login(props) {
       </form>
       <Link to="/modifiedPassword">Mot de passe oublié?</Link>
       </form>
-      <Link to="/loginAdmin">Se connecter en tant qu’administrateur </Link>
+      <Link to="/forgot-password">Mot de passe oublié?</Link>
     </div>
   );
 }
