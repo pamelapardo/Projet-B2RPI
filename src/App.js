@@ -54,8 +54,8 @@ function App() {
           <Route path='*/metiers' element={<Metiers />} />
           <Route path='*/metier-admin' element={<MetierAdmin />} />
           <Route path='*/administration' element={<Administration />} />
-
         </Route>
+
       </Routes>
     </div>
   );
