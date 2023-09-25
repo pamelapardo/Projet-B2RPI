@@ -30,16 +30,17 @@ function App(props) {
     setIsLoggedIn(true);
   };
 
-  const LoginSuccessAdmin  = () => {
+  const LoginSuccessAdmin = () => {
     setIsLoggedInAdmin(true);
   };
 
   return (
     <div className="h100">
+
       <Routes>
         {/* Si la connexion est réussie alors affiche le Header */}
-        {!isLoggedIn  ? (
-          <Route path="/" element={<Login onLoginSuccess={LoginSuccess} onLoginSuccessAdmin={LoginSuccessAdmin}/>   } />
+        {!isLoggedIn ? (
+          <Route path="/" element={<Login onLoginSuccess={LoginSuccess} />} />
         ) : (
           <Route path="/*" element={<Header />} />
         )}
@@ -47,7 +48,7 @@ function App(props) {
       <Routes>
         {isLoggedIn && ( // Afficher les routes protégées uniquement si l'utilisateur est connecté
           <>
-            <Route path="/Application" element={<Applications />} />
+            <Route path="/" element={<Applications />} />
             <Route path="/wiki/*" element={<Wiki />}>
               <Route path="*" element={<WikiLanding />} />
               <Route path="*/all-articles" element={<WikiContent />} />
@@ -56,30 +57,21 @@ function App(props) {
             </Route>
             <Route path='/profile/' element={<Profile />} />
             <Route path='/appLaunch' element={<AppLaunch />} />
-
-            {/* PAGES ADMIN - Route temporaire */}
-            <Routes>
-        {/* Si la connexion est réussie alors affiche le Header */}
-        {!isLoggedInAdmin  ? (
-          <Route path="/" element={<Login onLoginSuccessAdmin={LoginSuccessAdmin}/>   } />
-        ) : (
-          <Route path='/admin-Tableau-de-bord/*' element={<AdminPages />} />
+            
+        {/* PAGES ADMIN - Route temporaire */}
+        {isLoggedInAdmin === 'admin@mail.com' && ( // Afficher les routes admin uniquement si l'utilisateur a le rôle d'admin
+          <Route path='/admin-Tableau-de-bord/*' element={<AdminPages />}>
+            <Route default path='*/tableau-de-bord' element={<TableauDeBord />} />
+            <Route path='*/gestion-de-utilisateurs' element={<GestionUtilisateurs />} />
+            <Route path='*/profil-de-utilisateur' element={<ProfilsAdmin />} />
+            <Route path='*/metiers' element={<Metiers />} />
+            <Route path='*/administration' element={<Administration />} />
+          </Route>
         )}
-      </Routes>
-            {isLoggedInAdmin &&( // Afficher les routes admin uniquement si l'utilisateur a le rôle d'admin
-              <Routes >
-                <Route default path='*/tableau-de-bord' element={<TableauDeBord />} >
-                <Route path='*/gestion-de-utilisateurs' element={<GestionUtilisateurs />} />
-                <Route path='*/profil-de-utilisateur' element={<ProfilsAdmin />} />
-                <Route path='*/metiers' element={<Metiers />} />
-                <Route path='*/administration' element={<Administration />} />
-                </Route>
-              </Routes>
-            )}
-          </>
+      </>
         )}
-      </Routes>
-    </div>
+    </Routes>
+    </div >
   );
 }
 

@@ -1,6 +1,6 @@
 import './login.scss';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase'; // Importez le service d'authentification de votre fichier auth.js
 
@@ -16,12 +16,14 @@ function Login(props) {
       const userCheck = await signInWithEmailAndPassword(auth, email, password);
       // Connexion réussie
       console.log('Logged in as:', userCheck.user.email);
-      props.onLoginSuccess();
+      
       if (email === 'admin@mail.com') {
-        props.onLoginSuccessAdmin(); 
+        < Navigate to="/admin-Tableau-de-bord/*"/>
       } else {
         console.log("vous n'etes pas un administrateur")
+        props.isLoggedInAdmin(email);
       }
+      props.onLoginSuccess();
     } catch (error) {
       // Gérer les erreurs d'authentification
       console.error('Login failed:', error.message);
