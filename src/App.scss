@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500;600&display=swap');
 
-a {
 
 a {
   border: none;
@@ -9,21 +8,18 @@ a {
   cursor: pointer;
   text-decoration: none;
 
-  &:visited {
 
   &:visited {
     color: #222222;
   }
 }
 
-button {
 
 button {
   border: none;
   font-family: 'Jost', sans-serif;
 }
 
-p {
 
 p {
   margin-block-start: 0.2em;
@@ -68,9 +64,6 @@ input {
 
 
 
-
-/* ----------------------------------------------- GENERAL HEIGHTS */
-.h100 {
 /* ----------------------------------------------- GENERAL HEIGHTS */
 .h100 {
   height: 100vh;
@@ -82,10 +75,6 @@ input {
 
 /* ----------------------------------------------- ALL BUTTONS STYLES */
 .common_btn {
-
-
-/* ----------------------------------------------- ALL BUTTONS STYLES */
-.common_btn {
   background-color: white;
   padding: 13px 40px;
   border-radius: 26px;
@@ -93,14 +82,12 @@ input {
   cursor: pointer;
 
   &:hover {
-  &:hover {
     background-color: #f1f1f1;
     -webkit-box-shadow: 0px 5px 10px -2px rgba(47, 47, 47, 0.236);
     -webkit-box-shadow: 0px 5px 10px -2px rgba(47, 47, 47, 0.236);
     box-shadow: 0px 4px 7px -2px rgba(47, 47, 47, 0.236);
   }
 
-  &:active {
 
   &:active {
     background-color: #0E8388;
@@ -111,7 +98,6 @@ input {
   }
 }
 
-.writeArticle_btn {
 
 .writeArticle_btn {
   border-radius: 50px;
@@ -125,7 +111,6 @@ input {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 
-  &:hover {
 
   &:hover {
     background-color: #0E8388;
@@ -135,7 +120,6 @@ input {
   }
 }
 
-.deco_btn {
 
 .deco_btn {
   background-color: #0E8388;
@@ -144,7 +128,6 @@ input {
   transition: 0.2s;
   cursor: pointer;
 
-  &:hover {
 
   &:hover {
     background-color: #f1f1f1;
@@ -152,8 +135,6 @@ input {
     -webkit-box-shadow: 0px 5px 10px -2px rgba(47, 47, 47, 0.236);
     box-shadow: 0px 4px 7px -2px rgba(47, 47, 47, 0.236);
   }
-
-  &:active {
 
   &:active {
     background-color: #0E8388;
@@ -167,8 +148,6 @@ input {
 
 
 
-// ----------------------------------------------- APP PAGE FORMAT
-.app_page_container {
 
 
 // ----------------------------------------------- APP PAGE FORMAT
@@ -176,11 +155,6 @@ input {
   height: calc(100% - 2em);
 }
 
-
-
-
-//----------------------------------------------- WIKI PAGE FORMAT
-.wiki_page_container {
 
 
 //----------------------------------------------- WIKI PAGE FORMAT
@@ -190,7 +164,6 @@ input {
   height: calc(100% - 2em);
 }
 
-.wiki_page_outlet_container {
 
 .wiki_page_outlet_container {
   display: flex;
@@ -208,7 +181,6 @@ input {
   mask-image: linear-gradient(to bottom, black 90%, transparent 98%);
 }
 
-.wiki_total_articles_container {
 
 .wiki_total_articles_container {
   display: flex;
@@ -219,10 +191,8 @@ input {
   padding-bottom: 40px;
   overflow-y: scroll;
   // height: calc(80vh - 107px);
-  // height: calc(80vh - 107px);
 }
 
-.sort_container {
 
 .sort_container {
   display: flex;
@@ -230,14 +200,12 @@ input {
   gap: 11px;
 }
 
-.trier_text {
 
 .trier_text {
   font-size: 0.9em;
   color: #b0b0b0;
 }
 
-.sort_btn_tout {
 
 .sort_btn_tout {
   padding: 7px 15px;
@@ -245,7 +213,6 @@ input {
   background-color: #DEDEDE;
 }
 
-.sort_btn_solution {
 
 .sort_btn_solution {
   padding: 7px 15px;
@@ -254,7 +221,6 @@ input {
   background-color: #A4C069;
 }
 
-.sort_btn_proc {
 
 .sort_btn_proc {
   padding: 7px 15px;
@@ -263,19 +229,10 @@ input {
 }
 
 .sort_btn_docu {
-
-.sort_btn_docu {
   padding: 7px 15px;
   border-radius: 30px;
   background-color: #C096E0;
 }
-
-
-
-
-// ----------------------------------------------- ICONS
-.loupe {
-
 
 // ----------------------------------------------- ICONS
 .loupe {
@@ -284,7 +241,6 @@ input {
   width: 19px;
 }
 
-.edit_icon {
 
 .edit_icon {
   background-image: url(./images/write_icon.svg );
@@ -302,18 +258,7 @@ input {
 
 
 
-.separator {
-  margin-top: 10px;
-  margin-bottom: 5px;
-  width: 100%;
-  border-bottom: solid 1px #D2D2D2;
-}
 
-
-
-
-// ----------------------------------------------- MDEDITORARTICLE PAGE
-.mdeditor_page_container {
 // ----------------------------------------------- MDEDITORARTICLE PAGE
 .mdeditor_page_container {
   z-index: 10;
@@ -327,7 +272,6 @@ input {
   transition: all 0.3s ease-in-out;
   pointer-events: none;
 
-  &.show {
 
   &.show {
     opacity: 1;
@@ -335,27 +279,23 @@ input {
     pointer-events: visible;
   }
 
-  & .wmde-markdown-var {
 
   & .wmde-markdown-var {
     height: 100% !important;
     overflow: hidden;
   }
 
-  & .w-md-editor-preview {
 
   & .w-md-editor-preview {
     background-color: #f1f1f1;
   }
 
-  & .wmde-markdown {
 
   & .wmde-markdown {
     background-color: transparent;
     color: #222222;
   }
 
-  & .w-md-editor {
 
   & .w-md-editor {
     --md-editor-background-color: #373737 !important;
@@ -364,7 +304,6 @@ input {
   }
 }
 
-.mdeditor_header {
 
 .mdeditor_header {
   background-color: #252525;
@@ -373,7 +312,6 @@ input {
   justify-content: flex-end;
 }
 
-.md_editor_btn {
 
 .md_editor_btn {
   background-color: #F2F2F2;

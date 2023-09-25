@@ -44,12 +44,8 @@ export default function Applications() {
       <div className='app_wrapper'>
 
         {posts.map((app, index) => {
-        {posts.map((app, index) => {
           return <AppCard
             key={index}
-            logo={app.img}
-            title={app.appname}
-            description={app.appdescription}
             logo={app.img}
             title={app.appname}
             description={app.appdescription}
