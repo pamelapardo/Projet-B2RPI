@@ -56,6 +56,7 @@ function App() {
           <Route path='*/profil' element={<Profile />} />
           <Route path='*/appLaunch' element={<AppLaunch />} />
         </Route>
+
       </Routes>
 
 

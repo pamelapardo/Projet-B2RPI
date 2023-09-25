@@ -176,6 +176,7 @@ export default function GestionUtilisateurs() {
             <div className='btn_supp_user'>
                 <button className='btn_admin'>Supprimer</button>
             </div>
+
         </div>
     )
 }
