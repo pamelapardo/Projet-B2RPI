@@ -1,7 +1,21 @@
 import React from 'react'
 import './profile.scss'
+import {  signOut } from "firebase/auth";
+import {auth} from '../firebase';
+import { useNavigate } from 'react-router-dom';
 
 export default function Profile() {
+  const navigate = useNavigate();
+ 
+  const handleLogout = () => {               
+      signOut(auth).then(() => {
+      // Sign-out successful.
+          navigate("/");
+          console.log("Signed out successfully")
+      }).catch((error) => {
+      // An error happened.
+      });
+  }
   return (
     <div className='profile_page_container'>
 
@@ -49,7 +63,7 @@ export default function Profile() {
             <label>Rôle</label>
             <p>Rédacteur</p>
           </div>
-          <button className='deco_btn'>Déconnexion</button>
+          <button onClick={handleLogout} className='deco_btn'>Déconnexion</button>
         </div>
       </div>
 

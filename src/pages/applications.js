@@ -3,9 +3,9 @@ import '../components/componentApplications/appCard.scss'
 import AppCard from '../components/componentApplications/appCard'
 import AppSearchBar from '../components/componentApplications/appSearchBar'
 import { db } from '../firebase';
-import { collection, getDocs, storage } from "firebase/firestore";
-import { Link } from 'react-router-dom';
-import { ref, listAll } from "firebase/storage";
+import { collection, getDocs } from "firebase/firestore";
+import { getStorage, ref, listAll } from "firebase/storage";
+// import { ref, listAll } from "firebase/storage";
 
 
 export default function Applications() {
@@ -38,8 +38,6 @@ export default function Applications() {
     <div className='app_page_container'>
       <div className='app_page_searchBar_container'>
         <AppSearchBar />
-        <Link to='/admin-Tableau-de-bord/*/tableau-de-bord'>------BUTTON TO ADMIN PAGE</Link>
-        <Link to='/admin-Tableau-de-bord/*/tableau-de-bord'>------BUTTON TO ADMIN PAGE</Link>
       </div>
       <div className='app_wrapper'>
 
