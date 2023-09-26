@@ -3,7 +3,7 @@ import { db } from '../../firebase';
 import { collection, getDocs } from "firebase/firestore";
 import { Link } from 'react-router-dom';
 
-export default function GestionUtilisateurs() {
+export default function ProfilsAdmin() {
     const [users, setUsers] = useState([]);
     const fetchUsers = async () => {
         await getDocs(collection(db, "Users")).then((querySnapshot) => {

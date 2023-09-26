@@ -3,7 +3,7 @@ import { db } from '../../firebase';
 import { collection, getDocs } from "firebase/firestore";
 import { Link } from 'react-router-dom';
 
-export default function Metiers() {
+export default function MetiersSelected() {
     const [metiers, setMetiers] = useState([]);
     const fetchmetiers = async () => {
         await getDocs(collection(db, "Metiers")).then((querySnapshot) => {
@@ -29,31 +29,31 @@ export default function Metiers() {
             <div className='list_admin_metier'>
                 <div className='app_metier'>
                     <div className='profil_admin_infos'>
-                        <label className='label_style'>LAPS<br/>
-                            KeyPass3b<br/>
-                            Gestion - RH<br/>
-                            Adobe Photoshop<br/>
-                            Edge<br/>
-                            Google Chrome<br/>
-                            AD<br/>
-                            Figma<br/>
-                            Kasm<br/>
-                            Cisco VPN connect<br/>
-                            Guardian - Gestion batiment<br/>
-                            ASO v4<br/>
-                            VS Code<br/>
-                            Visual Studio<br/>
-                            Teams<br/>
-                            Outlook<br/>
-                            VM Horizon<br/>
+                        <label className='label_style'>LAPS<br />
+                            KeyPass3b<br />
+                            Gestion - RH<br />
+                            Adobe Photoshop<br />
+                            Edge<br />
+                            Google Chrome<br />
+                            AD<br />
+                            Figma<br />
+                            Kasm<br />
+                            Cisco VPN connect<br />
+                            Guardian - Gestion batiment<br />
+                            ASO v4<br />
+                            VS Code<br />
+                            Visual Studio<br />
+                            Teams<br />
+                            Outlook<br />
+                            VM Horizon<br />
                         </label>
                     </div>
                 </div>
 
                 <div className='app_metier'>
                     <div className='btn_princip'>
-                    <button className='btn_admin'>Ajouter</button>
-                    <button className='btn_admin'>Supprimer</button>
+                        <button className='btn_admin'>Ajouter</button>
+                        <button className='btn_admin'>Supprimer</button>
                     </div>
                 </div>
 
@@ -61,27 +61,27 @@ export default function Metiers() {
                 <div className='app_metier'>
                     <div className='profil_admin_infos'>
                         <label className='label_style'>
-                            LAPS<br/>
-                            KeyPass3<br/>
-                            Gestion - RH<br/>
-                            Adobe Photoshop<br/>
-                            Edge<br/>
-                            Google Chrome<br/>
-                            AD<br/>
-                            Figma<br/>
-                            Kasm<br/>
-                            Cisco VPN connect<br/>
-                            Guardian - Gestion batiment<br/>
-                            ASO v4<br/>
-                            VS Code<br/>
-                            Visual Studio<br/>
-                            Teams<br/>
-                            Outlook<br/>
-                            VM Horizon<br/>
-                            AD<br/>
-                            Figma<br/>
-                            Kasm<br/>
-                            Cisco VPN connect<br/>
+                            LAPS<br />
+                            KeyPass3<br />
+                            Gestion - RH<br />
+                            Adobe Photoshop<br />
+                            Edge<br />
+                            Google Chrome<br />
+                            AD<br />
+                            Figma<br />
+                            Kasm<br />
+                            Cisco VPN connect<br />
+                            Guardian - Gestion batiment<br />
+                            ASO v4<br />
+                            VS Code<br />
+                            Visual Studio<br />
+                            Teams<br />
+                            Outlook<br />
+                            VM Horizon<br />
+                            AD<br />
+                            Figma<br />
+                            Kasm<br />
+                            Cisco VPN connect<br />
                         </label>
                     </div>
                 </div>

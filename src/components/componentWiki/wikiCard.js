@@ -1,6 +1,7 @@
 import React from 'react'
 import './wikiCard.scss'
 import '../../components/componentApplications/appCard.scss'
+import { NavLink } from 'react-router-dom';
 
 export default function WikiCard(articleSrc) {
   const cardStyle = {
@@ -8,7 +9,7 @@ export default function WikiCard(articleSrc) {
   };
 
   return (
-    <div className='wikiCard_container'>
+    <NavLink  to='/redirect/*/wiki/*/all-articles/article' className='wikiCard_container'>
       <div className='tout' style={cardStyle}></div>
       <div className='wikiCard_card_items'>
         <div className='wikiCard_titles'>
@@ -19,6 +20,6 @@ export default function WikiCard(articleSrc) {
           <p className='wikiCard_edition'>Dernière édition:</p> <p>{articleSrc.articleLastEdit}</p>
         </div>
       </div>
-    </div>
+    </NavLink>
   )
 }

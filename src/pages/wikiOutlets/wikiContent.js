@@ -4,6 +4,7 @@ import WikiCard from '../../components/componentWiki/wikiCard'
 import { db } from '../../firebase';
 import { collection, getDocs } from "firebase/firestore";
 import '../../components/componentApplications/appCard.scss'
+import { Link } from 'react-router-dom';
 
 export default function WikiContent() {
 
