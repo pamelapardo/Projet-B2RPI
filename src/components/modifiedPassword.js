@@ -63,7 +63,6 @@ un lien que vous permetra de changer votre mot de passe.</p>
       
       <Link to="/">Revenir a la page Principal</Link>
       
-      <Link to="/ChangementMdp">Changez le mdp</Link>
     </div>
     )
 

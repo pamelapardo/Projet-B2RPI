@@ -34,7 +34,7 @@ function Login(props) {
 
   return (
     <div className="container">
-      <h2>ARKHE</h2>
+      <h2 className='Title'>ARKHE</h2>
       <form>
         <div className="form-group">
           <label className="FormLogin" htmlFor="email">Mail:</label><br/>
