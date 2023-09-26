@@ -1,57 +1,41 @@
 import './login.scss';
 import React, { useState } from 'react';
-import { Link, Route } from 'react-router-dom';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase'; // Importez le service d'authentification de votre fichier auth.js
-import { getFirestore, doc, getDoc } from 'firebase/firestore'; // Importez Firestore
+import { Link, useNavigate } from 'react-router-dom';
+// import { getFirestore, doc, getDoc } from 'firebase/firestore'; // Importez Firestore
+import { auth, } from "../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
+
 
 function Login(props) {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = async (e) => {
+  const onLogin = (e) => {
     e.preventDefault();
-
-    try {
-      // Utilisez le service d'authentification importé pour vous connecter
-      const userCheck = await signInWithEmailAndPassword(auth, email, password);
-      console.log('Logged in as:', userCheck.user.email);
-
-      // Récupérez le rôle de l'utilisateur depuis Firestore
-      const db = getFirestore();
-      const userDocRef = doc(db, 'roles', userCheck.user.uid);
-      const userDocSnap = await getDoc(userDocRef);
-
-      if (userDocSnap.exists()) {
-        const userRole = userDocSnap.data().role;
-        console.log('User role:', userRole);
-
-        // Maintenant, vous avez le rôle de l'utilisateur
-        // et vous pouvez l'utiliser pour contrôler l'accès aux pages ou fonctionnalités spécifiques.
-        // Par exemple, redirigez l'utilisateur en fonction de son rôle :
-        if (userRole === 'admin') {
-          // return <Route to="/admin-Tableau-de-bord/*" />;
-          props.history.push('/admin');
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        if (userCredential.user.email === 'admin@mail.com') {
+          const user = userCredential.user.email;
+          navigate("/admin-Tableau-de-bord/*/tableau-de-bord")
+          console.log(user, 'Auth admin')
         } else {
-          // return <Route to="/*" />;
-          props.history.push('/dashboard');
+          navigate("/redirect/*/Application")
+          console.log("Auth client")
         }
-        
-        props.onLoginSuccess();
-      } else {
-        // Le document Firestore associé à l'utilisateur n'existe pas
-        // Gérez ce cas en conséquence
-      }
-    } catch (error) {
-      // Gérer les erreurs d'authentification
-      console.error('Login failed:', error.message);
-    }
-  };
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage)
+      });
+
+  }
 
   return (
     <div className="container">
       <h2>ARKHE</h2>
-      <form onSubmit={handleLogin}>
+      <form>
         <div className="form-group">
           <label htmlFor="email">E-mail:</label>
           <input
@@ -72,7 +56,7 @@ function Login(props) {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button className='btn-Submit' type="submit">Se connecter</button>
+        <Link onClick={onLogin} className='btn-Submit' type="submit">Se connecter</Link>
       </form>
       <Link to="/forgot-password">Mot de passe oublié?</Link>
     </div>

@@ -30,7 +30,7 @@ export default function AppModal(props) {
 
 
 
-            <NavLink to='/wiki/*' className='common_btn'>Wiki</NavLink>
+            <NavLink to='/redirect/*/wiki/*' className='common_btn'>Wiki</NavLink>
             {/* Mettre le bon lien. Ce lien doit redirect vers le wiki demandé */}
           </div>
         </div>
