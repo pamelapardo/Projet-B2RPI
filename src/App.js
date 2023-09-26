@@ -15,6 +15,7 @@ import TableauDeBord from './pages/adminOutlets/tableauDeBord';
 import GestionUtilisateurs from './pages/adminOutlets/gestionUtilisateurs';
 import ProfilsAdmin from './pages/adminOutlets/profilsAdmin';
 import Metiers from './pages/adminOutlets/metiers';
+import MetierAdmin from './pages/adminOutlets/metierAdmin';
 import Administration from './pages/adminOutlets/administration';
 
 function App() {

@@ -16,13 +16,14 @@ export default function GestionUtilisateurs() {
         fetchUsers();
     }, [])
 
-
     return (
         <div className='gestion_heigh'>
             <h1>Gestion d’utilisateurs</h1>
             <p className='tdb_card_p'>Ajoutez, supprimez ou modifiez les utilisateurs de l’application.</p>
             <div className='separator' />
-            <Link className='md_editor_btn' to="/admin-Tableau-de-bord/*/gestion-de-utilisateurs">Revenir en arrière</Link>
+            <div className='admin_link'>
+                <Link className='md_editor_btn' to="/admin-Tableau-de-bord/*/gestion-de-utilisateurs">Revenir en arrière</Link>
+            </div>
             <div className='profil_container'>
                 <div className='profile_photo_admin_container'>
                     <div className='profilePicAdmin' />
@@ -34,7 +35,7 @@ export default function GestionUtilisateurs() {
 
 
 
-                <div className='test'>
+                <div className='list_info_user'>
                     <div className='detail_info_user'>
                         <div className='profil_admin_infos'>
                             <div className='administration_form_container'>
@@ -168,6 +169,11 @@ export default function GestionUtilisateurs() {
                     </div>
                 </div>
             </div>
+
+            <div className='btn_supp_user'>
+                <button className='btn_admin'>Supprimer</button>
+            </div>
+
         </div>
     )
 }

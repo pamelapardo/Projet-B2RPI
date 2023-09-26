@@ -208,7 +208,7 @@
   align-items: center;
   margin-bottom: 20px;
   margin-top: 200px;
-  margin-left: 200px;
+  margin-left: 100px;
 }
 
 .profilePicAdmin{
@@ -222,7 +222,44 @@
   flex-direction: column;
 }
 
-.test{
+.list_info_user{
   display: flex;
   margin-left: 200px;
+}
+.admin_link{
+  margin-top: 25px;
+}
+.btn_supp_user{
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+
+// ***** Métier Admin
+.admin_container{
+  display: flex;
+  margin-top: 13px;
+}
+.title_admin_metier{
+  font-size: large;
+  margin-top: 8px;
+  margin-left: 20px;
+  font-size: 25px;
+}
+.list_admin_metier{
+  display: flex;
+}
+.btn_admin{
+  padding: 7px 15px;
+  border-radius: 30px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.btn_princip{
+  margin-top: 150px;
+  margin-left: 60px;
+
 }
