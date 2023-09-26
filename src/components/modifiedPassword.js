@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import { Link } from 'react-router-dom';
+import './modifiedPassword.scss';
 
 
 
@@ -35,15 +36,17 @@ function ModifiedPassword() {
         
       <div className="container">
         
-      <h2>ARKHE</h2>
-      <h3>réinitialisation du mot de passe </h3>
+      <h2 className="Title">ARKHE</h2>
+      <h3 className="Texte">réinitialisation du mot de passe </h3>
+      <p className="Explication">Si votre mail existe dans notre base, vous receverez un mail avec 
+un lien que vous permetra de changer votre mot de passe.</p>
       {emailSent ? (
         // Si l'envoie du mail a reussi alors envoie du message 
         <p>Un e-mail de réinitialisation de mot de passe a été envoyé à votre adresse e-mail.</p>
       ) : (
       <form onSubmit={resetPassword}>
         <div className="form-group">
-          <label htmlFor="email">E-mail:</label>
+          <label className="ChangementMail" htmlFor="email">Mail:</label>
           <input
             type="email"
             id="email"
@@ -51,14 +54,16 @@ function ModifiedPassword() {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <button className='SubmitNewPassword' type="submit">Changer mon mot de passe</button>
+        <button className='SubmitNewPassword' type="submit">Envoyer</button>
       </form>
       )}
       {/* envoie d'un message d'erreur si une erreur et detecter  */}
       {error && <p>{error}</p>}
       <br/>
       
-      <Link to="/*">Revenir a la page Principal</Link>
+      <Link to="/">Revenir a la page Principal</Link>
+      
+      <Link to="/ChangementMdp">Changez le mdp</Link>
     </div>
     )
 

@@ -27,6 +27,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/forgot-password" element={<ModifiedPassword />} />
       </Routes>
 
       <div className='restricted_size'>
@@ -52,7 +53,7 @@ function App() {
             <Route path="*/brouillons/" element={<WikiBrouillons />} />
             <Route path='*/redaction_article' element={<MDEditorArticle />} />
           </Route>
-          <Route path='*/profile' element={<Profile />} />
+          <Route path='*/profil' element={<Profile />} />
           <Route path='*/appLaunch' element={<AppLaunch />} />
         </Route>
       </Routes>

@@ -34,11 +34,12 @@ function Login(props) {
 
   return (
     <div className="container">
-      <h2>ARKHE</h2>
+      <h2 className='Title'>ARKHE</h2>
+      <p>Connexion</p>
       <form>
         <div className="form-group">
-          <label htmlFor="email">E-mail:</label>
-          <input
+          <label className="FormLogin" htmlFor="email">Mail:</label><br/>
+          <input className='inputLogin'
             type="email"
             id="email"
             name="email"
@@ -46,9 +47,9 @@ function Login(props) {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Mot de passe:</label>
-          <input
+        <div className="form-groupPassword">
+          <label className="FormLogin" htmlFor="password">Mot de passe:</label><br/>
+          <input className='inputLogin'
             type="password"
             id="password"
             name="password"
