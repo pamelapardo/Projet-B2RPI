@@ -22,8 +22,9 @@ export default function Applications() {
     //   })
     // }
     await getDocs(collection(db, "Apps")).then((querySnapshot) => {
-      const mapData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-      setPosts(mapData);
+      const newData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setPosts(newData);
+      console.log(posts, newData);
     })
   }
 
@@ -31,6 +32,7 @@ export default function Applications() {
     fetchPost();
   }, [])
 
+// Also get images from Storage with their url
   
   return (
     <div className='app_page_container'>

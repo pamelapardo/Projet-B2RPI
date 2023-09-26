@@ -24,4 +24,5 @@ const db = getFirestore(app);
 const storage = getStorage(app, "gs://arkhe-db.appspot.com");
 const auth = getAuth(app);
 
+
 export { db, storage, auth };

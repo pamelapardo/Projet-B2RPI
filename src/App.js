@@ -13,17 +13,21 @@ import Login from '../src/components/login';
 import AdminPages from './pages/adminPages';
 import TableauDeBord from './pages/adminOutlets/tableauDeBord';
 import GestionUtilisateurs from './pages/adminOutlets/gestionUtilisateurs';
-import ProfilsAdmin from './pages/adminOutlets/profilsAdmin';
 import Metiers from './pages/adminOutlets/metiers';
 import MetierAdmin from './pages/adminOutlets/metierAdmin';
 import Administration from './pages/adminOutlets/administration';
+import ModifiedPassword from './components/modifiedPassword';
+import ConnexionAdmin from './components/connexionAdmin';
+import ProfilsAdmin from './pages/adminOutlets/profilsAdmin';
 
 function App() {
 
   return (
     <div className="h100">
+
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/forgot-password" element={<ModifiedPassword />} />
       </Routes>
 
       <div className='restricted_size'>
@@ -33,8 +37,10 @@ function App() {
           <Route path='*/gestion-de-utilisateurs' element={<GestionUtilisateurs />} />
           <Route path='*/profil-de-utilisateur' element={<ProfilsAdmin />} />
           <Route path='*/metiers' element={<Metiers />} />
+          <Route path='*/metier-admin' element={<MetierAdmin />} />
           <Route path='*/administration' element={<Administration />} />
         </Route>
+
       </Routes>
       </div>
     
@@ -47,9 +53,10 @@ function App() {
             <Route path="*/brouillons/" element={<WikiBrouillons />} />
             <Route path='*/redaction_article' element={<MDEditorArticle />} />
           </Route>
-          <Route path='*/profile' element={<Profile />} />
+          <Route path='*/profil' element={<Profile />} />
           <Route path='*/appLaunch' element={<AppLaunch />} />
         </Route>
+
       </Routes>
 
 

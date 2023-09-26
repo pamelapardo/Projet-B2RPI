@@ -19,7 +19,7 @@ export default function Administration() {
             <label for='apps' className='label_style'>Applications</label>
             <textarea className='label_height' id='apps' name='apps' type='textarea' placeholder='Vscode, Postman, ...' />
           </div>
-          <button className='deco_btn '>Envoyer la requête</button>
+          <button className='deco_btn '>Envoyer</button>
         </div>
         <div className='administrationAdmin_card_container'>
           <h6 className='administrationAdmin_card_title'>Nouvelle application</h6>
@@ -30,7 +30,7 @@ export default function Administration() {
             <label for='app_version' className='label_style'>Version</label>
             <input id='app_version' name='apps_version' type='textarea' placeholder='Vscode, Postman, ...' />
           </div>
-          <button className='deco_btn '>Envoyer la requête</button>
+          <button className='deco_btn '>Envoyer</button>
         </div>
       </div>
     </div>

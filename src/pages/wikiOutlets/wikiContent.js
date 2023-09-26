@@ -25,12 +25,10 @@ export default function WikiContent() {
     fetchArticle();
   }, [])
 
-
-
   return (
     <>
       <WikiSearchBar/>
-      <div className='wiki_total_articles_container masked_overflow jhdvkjwdvkwajdh'>
+      <div className='wiki_total_articles_container masked_overflow'>
         {articles.map((articleSrc, index) => {
           return (
             <WikiCard
