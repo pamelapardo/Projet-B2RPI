@@ -51,6 +51,7 @@ function App() {
           <Route path='*/administration' element={<Administration/>}/>
 
         </Route>
+      </div>
 
 
 
